@@ -35,7 +35,7 @@ flutter run
 ```
 
 Link of the APK
-- (https://drive.google.com/file/d/1qSLPnGCDAVCZyWo9emcxME2LifM64JvY/view?usp=sharing)
+- https://drive.google.com/file/d/1qSLPnGCDAVCZyWo9emcxME2LifM64JvY/view?usp=sharing
 
 Demo Video for the project  
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
