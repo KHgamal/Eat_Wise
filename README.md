@@ -18,10 +18,10 @@ A simple meal tracking app that allows users to log meals, track daily calorie i
 - GetIt: Dependency injection for managing services.
 - ScreenUtil: For handling responsiveness across different screen sizes.
 
-  ### How to Run the App
+### How to Run the App
 
 Clone the repository:
-
+```
 git clone <repo-url>
 cd meal-tracker-app
 ```
