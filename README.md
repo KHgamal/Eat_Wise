@@ -1,6 +1,14 @@
-# eat_wise
+### Meal Tracker App
 
-A new Flutter project.
+# Overview
+A simple meal tracking app that allows users to log meals, track daily calorie intake, and manage meal entries efficiently.
+
+# Features
+
+- Add meals with name, calories, time, and an optional photo.
+- Display meals in a list with total calories per day.
+- Delete meal entries.
+- Sort the meal list by name, calories, or time.
 
 ## Getting Started
 
