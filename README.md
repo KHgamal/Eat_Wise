@@ -21,18 +21,18 @@ A simple meal tracking app that allows users to log meals, track daily calorie i
   ### How to Run the App
 
 Clone the repository:
-'''
+
 git clone <repo-url>
 cd meal-tracker-app
-'''
+```
 Install dependencies:
-'''
+```
 flutter pub get
-'''
+```
 Run the app:
-'''
+```
 flutter run
-'''
+```
 ## Getting Started
 
 This project is a starting point for a Flutter application.
