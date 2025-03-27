@@ -2,7 +2,7 @@ import 'package:hive/hive.dart';
 part 'meal_model.g.dart';
 
 @HiveType(typeId: 0)
-class MealModel extends HiveObject {
+class MealTrackModel extends HiveObject {
   @HiveField(0)
   final String id;
 
@@ -18,7 +18,7 @@ class MealModel extends HiveObject {
   @HiveField(4)
   final String? photoPath;
 
-  MealModel({
+  MealTrackModel({
     required this.id,
     required this.name,
     required this.calories,

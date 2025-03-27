@@ -10,7 +10,7 @@ import '../bloc/meal_bloc.dart';
 import '../bloc/meal_event.dart';
 
 class MealList extends StatelessWidget {
-  final List<Meal> meals;
+  final List<MealTrack> meals;
 
   const MealList({super.key, required this.meals});
 

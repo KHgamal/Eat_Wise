@@ -1,7 +1,7 @@
 import '../repositories/meal_repository.dart';
 
 class DeleteMeal {
-  final MealRepository repository;
+  final MealTrackRepository repository;
 
   DeleteMeal(this.repository);
 

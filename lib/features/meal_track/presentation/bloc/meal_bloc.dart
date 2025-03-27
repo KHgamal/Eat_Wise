@@ -75,7 +75,7 @@ class MealBloc extends Bloc<MealEvent, MealState> {
     });
   }
 
-  int _calculateTotalCalories(List<Meal> meals, DateTime selectedDate) {
+  int _calculateTotalCalories(List<MealTrack> meals, DateTime selectedDate) {
     return meals
         .where((meal) =>
             meal.time.day == selectedDate.day &&

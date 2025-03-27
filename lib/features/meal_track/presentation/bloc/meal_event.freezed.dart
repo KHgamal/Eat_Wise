@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$MealEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Meal meal) addMeal,
+    required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
     required TResult Function(String sortBy) sortMeals,
@@ -27,7 +27,7 @@ mixin _$MealEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Meal meal)? addMeal,
+    TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
     TResult? Function(String sortBy)? sortMeals,
@@ -36,7 +36,7 @@ mixin _$MealEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Meal meal)? addMeal,
+    TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
     TResult Function(String sortBy)? sortMeals,
@@ -100,7 +100,7 @@ abstract class _$$AddMealImplCopyWith<$Res> {
           _$AddMealImpl value, $Res Function(_$AddMealImpl) then) =
       __$$AddMealImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({Meal meal});
+  $Res call({MealTrack meal});
 }
 
 /// @nodoc
@@ -122,7 +122,7 @@ class __$$AddMealImplCopyWithImpl<$Res>
       null == meal
           ? _value.meal
           : meal // ignore: cast_nullable_to_non_nullable
-              as Meal,
+              as MealTrack,
     ));
   }
 }
@@ -133,7 +133,7 @@ class _$AddMealImpl implements _AddMeal {
   const _$AddMealImpl(this.meal);
 
   @override
-  final Meal meal;
+  final MealTrack meal;
 
   @override
   String toString() {
@@ -162,7 +162,7 @@ class _$AddMealImpl implements _AddMeal {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Meal meal) addMeal,
+    required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
     required TResult Function(String sortBy) sortMeals,
@@ -174,7 +174,7 @@ class _$AddMealImpl implements _AddMeal {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Meal meal)? addMeal,
+    TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
     TResult? Function(String sortBy)? sortMeals,
@@ -186,7 +186,7 @@ class _$AddMealImpl implements _AddMeal {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Meal meal)? addMeal,
+    TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
     TResult Function(String sortBy)? sortMeals,
@@ -241,9 +241,9 @@ class _$AddMealImpl implements _AddMeal {
 }
 
 abstract class _AddMeal implements MealEvent {
-  const factory _AddMeal(final Meal meal) = _$AddMealImpl;
+  const factory _AddMeal(final MealTrack meal) = _$AddMealImpl;
 
-  Meal get meal;
+  MealTrack get meal;
 
   /// Create a copy of MealEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -320,7 +320,7 @@ class _$DeleteMealImpl implements _DeleteMeal {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Meal meal) addMeal,
+    required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
     required TResult Function(String sortBy) sortMeals,
@@ -332,7 +332,7 @@ class _$DeleteMealImpl implements _DeleteMeal {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Meal meal)? addMeal,
+    TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
     TResult? Function(String sortBy)? sortMeals,
@@ -344,7 +344,7 @@ class _$DeleteMealImpl implements _DeleteMeal {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Meal meal)? addMeal,
+    TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
     TResult Function(String sortBy)? sortMeals,
@@ -451,7 +451,7 @@ class _$LoadMealsImpl implements _LoadMeals {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Meal meal) addMeal,
+    required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
     required TResult Function(String sortBy) sortMeals,
@@ -463,7 +463,7 @@ class _$LoadMealsImpl implements _LoadMeals {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Meal meal)? addMeal,
+    TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
     TResult? Function(String sortBy)? sortMeals,
@@ -475,7 +475,7 @@ class _$LoadMealsImpl implements _LoadMeals {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Meal meal)? addMeal,
+    TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
     TResult Function(String sortBy)? sortMeals,
@@ -601,7 +601,7 @@ class _$SortMealsImpl implements _SortMeals {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Meal meal) addMeal,
+    required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
     required TResult Function(String sortBy) sortMeals,
@@ -613,7 +613,7 @@ class _$SortMealsImpl implements _SortMeals {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Meal meal)? addMeal,
+    TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
     TResult? Function(String sortBy)? sortMeals,
@@ -625,7 +625,7 @@ class _$SortMealsImpl implements _SortMeals {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Meal meal)? addMeal,
+    TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
     TResult Function(String sortBy)? sortMeals,
@@ -759,7 +759,7 @@ class _$SelectDateImpl implements _SelectDate {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Meal meal) addMeal,
+    required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
     required TResult Function(String sortBy) sortMeals,
@@ -771,7 +771,7 @@ class _$SelectDateImpl implements _SelectDate {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Meal meal)? addMeal,
+    TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
     TResult? Function(String sortBy)? sortMeals,
@@ -783,7 +783,7 @@ class _$SelectDateImpl implements _SelectDate {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Meal meal)? addMeal,
+    TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
     TResult Function(String sortBy)? sortMeals,

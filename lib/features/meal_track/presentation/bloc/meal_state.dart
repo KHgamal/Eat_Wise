@@ -6,6 +6,6 @@ part 'meal_state.freezed.dart';
 class MealState with _$MealState {
   const factory MealState.initial() = _Initial;
   const factory MealState.loading() = _Loading;
-  const factory MealState.loaded(List<Meal> meals, int totalCalories ,DateTime selectedDate,) = _Loaded;
+  const factory MealState.loaded(List<MealTrack> meals, int totalCalories ,DateTime selectedDate,) = _Loaded;
   const factory MealState.error(String message) = _Error;
 }

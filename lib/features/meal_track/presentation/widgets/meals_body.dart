@@ -15,7 +15,7 @@ class MealsBody extends StatelessWidget {
   final ScrollController _scrollController;
   final DateTime selectedDate;
   final int totalCalories;
-  final List<Meal> meals;
+  final List<MealTrack> meals;
 
   @override
   Widget build(BuildContext context) {

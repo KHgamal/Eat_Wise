@@ -21,7 +21,7 @@ mixin _$MealState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)
         loaded,
     required TResult Function(String message) error,
   }) =>
@@ -31,7 +31,7 @@ mixin _$MealState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult? Function(String message)? error,
   }) =>
@@ -41,7 +41,7 @@ mixin _$MealState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -138,7 +138,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)
         loaded,
     required TResult Function(String message) error,
   }) {
@@ -151,7 +151,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult? Function(String message)? error,
   }) {
@@ -164,7 +164,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -261,7 +261,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)
         loaded,
     required TResult Function(String message) error,
   }) {
@@ -274,7 +274,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult? Function(String message)? error,
   }) {
@@ -287,7 +287,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -346,7 +346,7 @@ abstract class _$$LoadedImplCopyWith<$Res> {
           _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<Meal> meals, int totalCalories, DateTime selectedDate});
+  $Res call({List<MealTrack> meals, int totalCalories, DateTime selectedDate});
 }
 
 /// @nodoc
@@ -370,7 +370,7 @@ class __$$LoadedImplCopyWithImpl<$Res>
       null == meals
           ? _value._meals
           : meals // ignore: cast_nullable_to_non_nullable
-              as List<Meal>,
+              as List<MealTrack>,
       null == totalCalories
           ? _value.totalCalories
           : totalCalories // ignore: cast_nullable_to_non_nullable
@@ -387,12 +387,12 @@ class __$$LoadedImplCopyWithImpl<$Res>
 
 class _$LoadedImpl implements _Loaded {
   const _$LoadedImpl(
-      final List<Meal> meals, this.totalCalories, this.selectedDate)
+      final List<MealTrack> meals, this.totalCalories, this.selectedDate)
       : _meals = meals;
 
-  final List<Meal> _meals;
+  final List<MealTrack> _meals;
   @override
-  List<Meal> get meals {
+  List<MealTrack> get meals {
     if (_meals is EqualUnmodifiableListView) return _meals;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_meals);
@@ -438,7 +438,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)
         loaded,
     required TResult Function(String message) error,
   }) {
@@ -451,7 +451,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult? Function(String message)? error,
   }) {
@@ -464,7 +464,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -514,10 +514,10 @@ class _$LoadedImpl implements _Loaded {
 }
 
 abstract class _Loaded implements MealState {
-  const factory _Loaded(final List<Meal> meals, final int totalCalories,
+  const factory _Loaded(final List<MealTrack> meals, final int totalCalories,
       final DateTime selectedDate) = _$LoadedImpl;
 
-  List<Meal> get meals;
+  List<MealTrack> get meals;
   int get totalCalories;
   DateTime get selectedDate;
 
@@ -599,7 +599,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)
         loaded,
     required TResult Function(String message) error,
   }) {
@@ -612,7 +612,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult? Function(String message)? error,
   }) {
@@ -625,7 +625,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(
-            List<Meal> meals, int totalCalories, DateTime selectedDate)?
+            List<MealTrack> meals, int totalCalories, DateTime selectedDate)?
         loaded,
     TResult Function(String message)? error,
     required TResult orElse(),

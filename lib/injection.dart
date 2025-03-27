@@ -17,7 +17,7 @@ Future<void> init() async {
   sl.registerLazySingleton<LocalDataSource>(() => LocalDataSource());
   
   // Repositories
-  sl.registerLazySingleton<MealRepository>(() => MealRepositoryImpl(sl()));
+  sl.registerLazySingleton<MealTrackRepository>(() => MealTrackRepositoryImpl(sl()));
   
   // Use Cases
   sl.registerLazySingleton(() => AddMeal(sl()));

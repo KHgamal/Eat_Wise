@@ -5,21 +5,21 @@ class LocalDataSource {
   static const String boxName = 'mealsBox';
 
   Future<void> init() async {
-    await Hive.openBox<MealModel>(boxName);
+    await Hive.openBox<MealTrackModel>(boxName);
   }
 
-  Future<void> addMeal(MealModel meal) async {
-    final box = Hive.box<MealModel>(boxName);
+  Future<void> addMeal(MealTrackModel meal) async {
+    final box = Hive.box<MealTrackModel>(boxName);
     await box.put(meal.id, meal);
   }
 
   Future<void> deleteMeal(String id) async {
-    final box = Hive.box<MealModel>(boxName);
+    final box = Hive.box<MealTrackModel>(boxName);
     await box.delete(id);
   }
 
-  List<MealModel> getMeals() {
-    final box = Hive.box<MealModel>(boxName);
+  List<MealTrackModel> getMeals() {
+    final box = Hive.box<MealTrackModel>(boxName);
     return box.values.toList();
   }
 }

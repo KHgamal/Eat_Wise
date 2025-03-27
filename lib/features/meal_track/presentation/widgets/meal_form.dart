@@ -39,7 +39,7 @@ class _MealFormState extends State<MealForm> {
   void _submit() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-      final meal = Meal(
+      final meal = MealTrack(
         id: DateTime.now().toString(),
         name: _name!,
         calories: _calories!,

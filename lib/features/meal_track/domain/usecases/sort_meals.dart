@@ -1,7 +1,7 @@
 import '../entities/meal.dart';
 
 class SortMeals {
-  List<Meal> call(List<Meal> meals, String sortBy) {
+  List<MealTrack> call(List<MealTrack> meals, String sortBy) {
     switch (sortBy) {
       case 'name':
         return meals..sort((a, b) => a.name.compareTo(b.name));

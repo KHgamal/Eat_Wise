@@ -1,7 +1,7 @@
 import '../entities/meal.dart';
 
-abstract class MealRepository {
-  Future<void> addMeal(Meal meal);
+abstract class MealTrackRepository {
+  Future<void> addMeal(MealTrack meal);
   Future<void> deleteMeal(String id);
-  List<Meal> getMeals();
+  List<MealTrack> getMeals();
 }

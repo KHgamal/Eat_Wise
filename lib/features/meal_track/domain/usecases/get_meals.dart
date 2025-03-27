@@ -2,11 +2,11 @@ import '../entities/meal.dart';
 import '../repositories/meal_repository.dart';
 
 class GetMeals {
-  final MealRepository repository;
+  final MealTrackRepository repository;
 
   GetMeals(this.repository);
 
-  List<Meal> call() {
+  List<MealTrack> call() {
     return repository.getMeals();
   }
 }

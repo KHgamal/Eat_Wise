@@ -3,14 +3,14 @@ import '../../domain/repositories/meal_repository.dart';
 import '../datasources/local_datasource.dart';
 import '../models/meal_model.dart';
 
-class MealRepositoryImpl implements MealRepository {
+class MealTrackRepositoryImpl implements MealTrackRepository {
   final LocalDataSource localDataSource;
 
-  MealRepositoryImpl(this.localDataSource);
+  MealTrackRepositoryImpl(this.localDataSource);
 
   @override
-  Future<void> addMeal(Meal meal) async {
-    final mealModel = MealModel(
+  Future<void> addMeal(MealTrack meal) async {
+    final mealModel = MealTrackModel(
       id: meal.id,
       name: meal.name,
       calories: meal.calories,
@@ -26,10 +26,10 @@ class MealRepositoryImpl implements MealRepository {
   }
 
   @override
-  List<Meal> getMeals() {
+  List<MealTrack> getMeals() {
     final mealModels = localDataSource.getMeals();
     return mealModels
-        .map((model) => Meal(
+        .map((model) => MealTrack(
               id: model.id,
               name: model.name,
               calories: model.calories,
