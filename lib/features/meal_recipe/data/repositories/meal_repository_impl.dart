@@ -20,6 +20,14 @@ class MealRepositoryImpl implements MealRepository {
     final response = await apiService.filterByCategory(category);
     return response['meals']?.map((m) => m.toEntity()).toList() ?? [];
   }
+
+  @override
+  Future<Meal> getMealDetails(String mealId) async {
+    final response = await apiService.getMealDetails(mealId);
+    final meals = response['meals']?.map((m) => m.toEntity()).toList() ?? [];
+    if (meals.isNotEmpty) return meals.first;
+    throw Exception('Meal not found');
+  }
 }
 
 extension MealModelExtension on MealModel {

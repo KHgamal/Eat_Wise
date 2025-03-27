@@ -46,7 +46,7 @@ class _MealFormState extends State<MealForm> {
         time: _time,
         photoPath: _photo?.path,
       );
-      context.read<MealBloc>().add(MealEvent.addMeal(meal));
+      context.read<MealTrackBloc>().add(MealTrackEvent.addMeal(meal));
       Navigator.pop(context);
     }
   }

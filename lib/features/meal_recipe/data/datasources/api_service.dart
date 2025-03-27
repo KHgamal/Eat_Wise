@@ -13,4 +13,7 @@ abstract class ApiService {
 
   @GET("filter.php")
   Future<Map<String, List<MealModel>>> filterByCategory(@Query("c") String category);
+
+  @GET("lookup.php")
+  Future<Map<String, List<MealModel>>> getMealDetails(@Query("i") String mealId);
 }

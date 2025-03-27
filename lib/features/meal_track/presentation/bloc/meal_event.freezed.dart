@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$MealEvent {
+mixin _$MealTrackEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(MealTrack meal) addMeal,
@@ -75,22 +75,23 @@ mixin _$MealEvent {
 }
 
 /// @nodoc
-abstract class $MealEventCopyWith<$Res> {
-  factory $MealEventCopyWith(MealEvent value, $Res Function(MealEvent) then) =
-      _$MealEventCopyWithImpl<$Res, MealEvent>;
+abstract class $MealTrackEventCopyWith<$Res> {
+  factory $MealTrackEventCopyWith(
+          MealTrackEvent value, $Res Function(MealTrackEvent) then) =
+      _$MealTrackEventCopyWithImpl<$Res, MealTrackEvent>;
 }
 
 /// @nodoc
-class _$MealEventCopyWithImpl<$Res, $Val extends MealEvent>
-    implements $MealEventCopyWith<$Res> {
-  _$MealEventCopyWithImpl(this._value, this._then);
+class _$MealTrackEventCopyWithImpl<$Res, $Val extends MealTrackEvent>
+    implements $MealTrackEventCopyWith<$Res> {
+  _$MealTrackEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -105,13 +106,13 @@ abstract class _$$AddMealImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$AddMealImplCopyWithImpl<$Res>
-    extends _$MealEventCopyWithImpl<$Res, _$AddMealImpl>
+    extends _$MealTrackEventCopyWithImpl<$Res, _$AddMealImpl>
     implements _$$AddMealImplCopyWith<$Res> {
   __$$AddMealImplCopyWithImpl(
       _$AddMealImpl _value, $Res Function(_$AddMealImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -137,7 +138,7 @@ class _$AddMealImpl implements _AddMeal {
 
   @override
   String toString() {
-    return 'MealEvent.addMeal(meal: $meal)';
+    return 'MealTrackEvent.addMeal(meal: $meal)';
   }
 
   @override
@@ -151,7 +152,7 @@ class _$AddMealImpl implements _AddMeal {
   @override
   int get hashCode => Object.hash(runtimeType, meal);
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -240,12 +241,12 @@ class _$AddMealImpl implements _AddMeal {
   }
 }
 
-abstract class _AddMeal implements MealEvent {
+abstract class _AddMeal implements MealTrackEvent {
   const factory _AddMeal(final MealTrack meal) = _$AddMealImpl;
 
   MealTrack get meal;
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddMealImplCopyWith<_$AddMealImpl> get copyWith =>
@@ -263,13 +264,13 @@ abstract class _$$DeleteMealImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$DeleteMealImplCopyWithImpl<$Res>
-    extends _$MealEventCopyWithImpl<$Res, _$DeleteMealImpl>
+    extends _$MealTrackEventCopyWithImpl<$Res, _$DeleteMealImpl>
     implements _$$DeleteMealImplCopyWith<$Res> {
   __$$DeleteMealImplCopyWithImpl(
       _$DeleteMealImpl _value, $Res Function(_$DeleteMealImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -295,7 +296,7 @@ class _$DeleteMealImpl implements _DeleteMeal {
 
   @override
   String toString() {
-    return 'MealEvent.deleteMeal(id: $id)';
+    return 'MealTrackEvent.deleteMeal(id: $id)';
   }
 
   @override
@@ -309,7 +310,7 @@ class _$DeleteMealImpl implements _DeleteMeal {
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -398,12 +399,12 @@ class _$DeleteMealImpl implements _DeleteMeal {
   }
 }
 
-abstract class _DeleteMeal implements MealEvent {
+abstract class _DeleteMeal implements MealTrackEvent {
   const factory _DeleteMeal(final String id) = _$DeleteMealImpl;
 
   String get id;
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteMealImplCopyWith<_$DeleteMealImpl> get copyWith =>
@@ -419,13 +420,13 @@ abstract class _$$LoadMealsImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadMealsImplCopyWithImpl<$Res>
-    extends _$MealEventCopyWithImpl<$Res, _$LoadMealsImpl>
+    extends _$MealTrackEventCopyWithImpl<$Res, _$LoadMealsImpl>
     implements _$$LoadMealsImplCopyWith<$Res> {
   __$$LoadMealsImplCopyWithImpl(
       _$LoadMealsImpl _value, $Res Function(_$LoadMealsImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -436,7 +437,7 @@ class _$LoadMealsImpl implements _LoadMeals {
 
   @override
   String toString() {
-    return 'MealEvent.loadMeals()';
+    return 'MealTrackEvent.loadMeals()';
   }
 
   @override
@@ -529,7 +530,7 @@ class _$LoadMealsImpl implements _LoadMeals {
   }
 }
 
-abstract class _LoadMeals implements MealEvent {
+abstract class _LoadMeals implements MealTrackEvent {
   const factory _LoadMeals() = _$LoadMealsImpl;
 }
 
@@ -544,13 +545,13 @@ abstract class _$$SortMealsImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$SortMealsImplCopyWithImpl<$Res>
-    extends _$MealEventCopyWithImpl<$Res, _$SortMealsImpl>
+    extends _$MealTrackEventCopyWithImpl<$Res, _$SortMealsImpl>
     implements _$$SortMealsImplCopyWith<$Res> {
   __$$SortMealsImplCopyWithImpl(
       _$SortMealsImpl _value, $Res Function(_$SortMealsImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -576,7 +577,7 @@ class _$SortMealsImpl implements _SortMeals {
 
   @override
   String toString() {
-    return 'MealEvent.sortMeals(sortBy: $sortBy)';
+    return 'MealTrackEvent.sortMeals(sortBy: $sortBy)';
   }
 
   @override
@@ -590,7 +591,7 @@ class _$SortMealsImpl implements _SortMeals {
   @override
   int get hashCode => Object.hash(runtimeType, sortBy);
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -679,12 +680,12 @@ class _$SortMealsImpl implements _SortMeals {
   }
 }
 
-abstract class _SortMeals implements MealEvent {
+abstract class _SortMeals implements MealTrackEvent {
   const factory _SortMeals(final String sortBy) = _$SortMealsImpl;
 
   String get sortBy;
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SortMealsImplCopyWith<_$SortMealsImpl> get copyWith =>
@@ -702,13 +703,13 @@ abstract class _$$SelectDateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$SelectDateImplCopyWithImpl<$Res>
-    extends _$MealEventCopyWithImpl<$Res, _$SelectDateImpl>
+    extends _$MealTrackEventCopyWithImpl<$Res, _$SelectDateImpl>
     implements _$$SelectDateImplCopyWith<$Res> {
   __$$SelectDateImplCopyWithImpl(
       _$SelectDateImpl _value, $Res Function(_$SelectDateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -734,7 +735,7 @@ class _$SelectDateImpl implements _SelectDate {
 
   @override
   String toString() {
-    return 'MealEvent.selectDate(date: $date)';
+    return 'MealTrackEvent.selectDate(date: $date)';
   }
 
   @override
@@ -748,7 +749,7 @@ class _$SelectDateImpl implements _SelectDate {
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -837,12 +838,12 @@ class _$SelectDateImpl implements _SelectDate {
   }
 }
 
-abstract class _SelectDate implements MealEvent {
+abstract class _SelectDate implements MealTrackEvent {
   const factory _SelectDate(final DateTime date) = _$SelectDateImpl;
 
   DateTime get date;
 
-  /// Create a copy of MealEvent
+  /// Create a copy of MealTrackEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectDateImplCopyWith<_$SelectDateImpl> get copyWith =>

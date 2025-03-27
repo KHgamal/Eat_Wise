@@ -20,18 +20,21 @@ mixin _$MealEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(String query) search,
     required TResult Function(String category) filterByCategory,
+    required TResult Function(String mealId) fetchMealDetails,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String query)? search,
     TResult? Function(String category)? filterByCategory,
+    TResult? Function(String mealId)? fetchMealDetails,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String query)? search,
     TResult Function(String category)? filterByCategory,
+    TResult Function(String mealId)? fetchMealDetails,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$MealEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Search value) search,
     required TResult Function(_FilterByCategory value) filterByCategory,
+    required TResult Function(_FetchMealDetails value) fetchMealDetails,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Search value)? search,
     TResult? Function(_FilterByCategory value)? filterByCategory,
+    TResult? Function(_FetchMealDetails value)? fetchMealDetails,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Search value)? search,
     TResult Function(_FilterByCategory value)? filterByCategory,
+    TResult Function(_FetchMealDetails value)? fetchMealDetails,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -146,6 +152,7 @@ class _$SearchImpl implements _Search {
   TResult when<TResult extends Object?>({
     required TResult Function(String query) search,
     required TResult Function(String category) filterByCategory,
+    required TResult Function(String mealId) fetchMealDetails,
   }) {
     return search(query);
   }
@@ -155,6 +162,7 @@ class _$SearchImpl implements _Search {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String query)? search,
     TResult? Function(String category)? filterByCategory,
+    TResult? Function(String mealId)? fetchMealDetails,
   }) {
     return search?.call(query);
   }
@@ -164,6 +172,7 @@ class _$SearchImpl implements _Search {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String query)? search,
     TResult Function(String category)? filterByCategory,
+    TResult Function(String mealId)? fetchMealDetails,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -177,6 +186,7 @@ class _$SearchImpl implements _Search {
   TResult map<TResult extends Object?>({
     required TResult Function(_Search value) search,
     required TResult Function(_FilterByCategory value) filterByCategory,
+    required TResult Function(_FetchMealDetails value) fetchMealDetails,
   }) {
     return search(this);
   }
@@ -186,6 +196,7 @@ class _$SearchImpl implements _Search {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Search value)? search,
     TResult? Function(_FilterByCategory value)? filterByCategory,
+    TResult? Function(_FetchMealDetails value)? fetchMealDetails,
   }) {
     return search?.call(this);
   }
@@ -195,6 +206,7 @@ class _$SearchImpl implements _Search {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Search value)? search,
     TResult Function(_FilterByCategory value)? filterByCategory,
+    TResult Function(_FetchMealDetails value)? fetchMealDetails,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -288,6 +300,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
   TResult when<TResult extends Object?>({
     required TResult Function(String query) search,
     required TResult Function(String category) filterByCategory,
+    required TResult Function(String mealId) fetchMealDetails,
   }) {
     return filterByCategory(category);
   }
@@ -297,6 +310,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String query)? search,
     TResult? Function(String category)? filterByCategory,
+    TResult? Function(String mealId)? fetchMealDetails,
   }) {
     return filterByCategory?.call(category);
   }
@@ -306,6 +320,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String query)? search,
     TResult Function(String category)? filterByCategory,
+    TResult Function(String mealId)? fetchMealDetails,
     required TResult orElse(),
   }) {
     if (filterByCategory != null) {
@@ -319,6 +334,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
   TResult map<TResult extends Object?>({
     required TResult Function(_Search value) search,
     required TResult Function(_FilterByCategory value) filterByCategory,
+    required TResult Function(_FetchMealDetails value) fetchMealDetails,
   }) {
     return filterByCategory(this);
   }
@@ -328,6 +344,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Search value)? search,
     TResult? Function(_FilterByCategory value)? filterByCategory,
+    TResult? Function(_FetchMealDetails value)? fetchMealDetails,
   }) {
     return filterByCategory?.call(this);
   }
@@ -337,6 +354,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Search value)? search,
     TResult Function(_FilterByCategory value)? filterByCategory,
+    TResult Function(_FetchMealDetails value)? fetchMealDetails,
     required TResult orElse(),
   }) {
     if (filterByCategory != null) {
@@ -356,5 +374,152 @@ abstract class _FilterByCategory implements MealEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FilterByCategoryImplCopyWith<_$FilterByCategoryImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FetchMealDetailsImplCopyWith<$Res> {
+  factory _$$FetchMealDetailsImplCopyWith(_$FetchMealDetailsImpl value,
+          $Res Function(_$FetchMealDetailsImpl) then) =
+      __$$FetchMealDetailsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String mealId});
+}
+
+/// @nodoc
+class __$$FetchMealDetailsImplCopyWithImpl<$Res>
+    extends _$MealEventCopyWithImpl<$Res, _$FetchMealDetailsImpl>
+    implements _$$FetchMealDetailsImplCopyWith<$Res> {
+  __$$FetchMealDetailsImplCopyWithImpl(_$FetchMealDetailsImpl _value,
+      $Res Function(_$FetchMealDetailsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MealEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? mealId = null,
+  }) {
+    return _then(_$FetchMealDetailsImpl(
+      null == mealId
+          ? _value.mealId
+          : mealId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchMealDetailsImpl implements _FetchMealDetails {
+  const _$FetchMealDetailsImpl(this.mealId);
+
+  @override
+  final String mealId;
+
+  @override
+  String toString() {
+    return 'MealEvent.fetchMealDetails(mealId: $mealId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchMealDetailsImpl &&
+            (identical(other.mealId, mealId) || other.mealId == mealId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, mealId);
+
+  /// Create a copy of MealEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchMealDetailsImplCopyWith<_$FetchMealDetailsImpl> get copyWith =>
+      __$$FetchMealDetailsImplCopyWithImpl<_$FetchMealDetailsImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String query) search,
+    required TResult Function(String category) filterByCategory,
+    required TResult Function(String mealId) fetchMealDetails,
+  }) {
+    return fetchMealDetails(mealId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String query)? search,
+    TResult? Function(String category)? filterByCategory,
+    TResult? Function(String mealId)? fetchMealDetails,
+  }) {
+    return fetchMealDetails?.call(mealId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String query)? search,
+    TResult Function(String category)? filterByCategory,
+    TResult Function(String mealId)? fetchMealDetails,
+    required TResult orElse(),
+  }) {
+    if (fetchMealDetails != null) {
+      return fetchMealDetails(mealId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Search value) search,
+    required TResult Function(_FilterByCategory value) filterByCategory,
+    required TResult Function(_FetchMealDetails value) fetchMealDetails,
+  }) {
+    return fetchMealDetails(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Search value)? search,
+    TResult? Function(_FilterByCategory value)? filterByCategory,
+    TResult? Function(_FetchMealDetails value)? fetchMealDetails,
+  }) {
+    return fetchMealDetails?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Search value)? search,
+    TResult Function(_FilterByCategory value)? filterByCategory,
+    TResult Function(_FetchMealDetails value)? fetchMealDetails,
+    required TResult orElse(),
+  }) {
+    if (fetchMealDetails != null) {
+      return fetchMealDetails(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FetchMealDetails implements MealEvent {
+  const factory _FetchMealDetails(final String mealId) = _$FetchMealDetailsImpl;
+
+  String get mealId;
+
+  /// Create a copy of MealEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchMealDetailsImplCopyWith<_$FetchMealDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

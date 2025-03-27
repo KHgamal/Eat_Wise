@@ -30,7 +30,7 @@ class _MealBlocBodyState extends State<MealBlocBody> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<MealBloc, MealState>(
+    return BlocBuilder<MealTrackBloc, MealTrackState>(
       builder: (context, state) {
         return state.when(
           initial: () => const Center(child: Text('No data yet')),

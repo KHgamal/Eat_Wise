@@ -27,6 +27,15 @@ class MealBloc extends Bloc<MealEvent, MealState> {
             emit(MealState.error(e.toString()));
           }
         },
+        fetchMealDetails: (mealId) async {
+          emit(const MealState.detailLoading());
+          try {
+            final meal = await repository.getMealDetails(mealId);
+            emit(MealState.detailLoaded(meal));
+          } catch (e) {
+            emit(MealState.error(e.toString()));
+          }
+        },
       );
     });
   }

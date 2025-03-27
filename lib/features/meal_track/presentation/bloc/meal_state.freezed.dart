@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$MealState {
+mixin _$MealTrackState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -75,22 +75,23 @@ mixin _$MealState {
 }
 
 /// @nodoc
-abstract class $MealStateCopyWith<$Res> {
-  factory $MealStateCopyWith(MealState value, $Res Function(MealState) then) =
-      _$MealStateCopyWithImpl<$Res, MealState>;
+abstract class $MealTrackStateCopyWith<$Res> {
+  factory $MealTrackStateCopyWith(
+          MealTrackState value, $Res Function(MealTrackState) then) =
+      _$MealTrackStateCopyWithImpl<$Res, MealTrackState>;
 }
 
 /// @nodoc
-class _$MealStateCopyWithImpl<$Res, $Val extends MealState>
-    implements $MealStateCopyWith<$Res> {
-  _$MealStateCopyWithImpl(this._value, this._then);
+class _$MealTrackStateCopyWithImpl<$Res, $Val extends MealTrackState>
+    implements $MealTrackStateCopyWith<$Res> {
+  _$MealTrackStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MealState
+  /// Create a copy of MealTrackState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -103,13 +104,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$MealStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$MealTrackStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealState
+  /// Create a copy of MealTrackState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -120,7 +121,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'MealState.initial()';
+    return 'MealTrackState.initial()';
   }
 
   @override
@@ -213,7 +214,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements MealState {
+abstract class _Initial implements MealTrackState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -226,13 +227,13 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$MealStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$MealTrackStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealState
+  /// Create a copy of MealTrackState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -243,7 +244,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'MealState.loading()';
+    return 'MealTrackState.loading()';
   }
 
   @override
@@ -336,7 +337,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements MealState {
+abstract class _Loading implements MealTrackState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -351,13 +352,13 @@ abstract class _$$LoadedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$MealStateCopyWithImpl<$Res, _$LoadedImpl>
+    extends _$MealTrackStateCopyWithImpl<$Res, _$LoadedImpl>
     implements _$$LoadedImplCopyWith<$Res> {
   __$$LoadedImplCopyWithImpl(
       _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealState
+  /// Create a copy of MealTrackState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -405,7 +406,7 @@ class _$LoadedImpl implements _Loaded {
 
   @override
   String toString() {
-    return 'MealState.loaded(meals: $meals, totalCalories: $totalCalories, selectedDate: $selectedDate)';
+    return 'MealTrackState.loaded(meals: $meals, totalCalories: $totalCalories, selectedDate: $selectedDate)';
   }
 
   @override
@@ -424,7 +425,7 @@ class _$LoadedImpl implements _Loaded {
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_meals), totalCalories, selectedDate);
 
-  /// Create a copy of MealState
+  /// Create a copy of MealTrackState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -513,7 +514,7 @@ class _$LoadedImpl implements _Loaded {
   }
 }
 
-abstract class _Loaded implements MealState {
+abstract class _Loaded implements MealTrackState {
   const factory _Loaded(final List<MealTrack> meals, final int totalCalories,
       final DateTime selectedDate) = _$LoadedImpl;
 
@@ -521,7 +522,7 @@ abstract class _Loaded implements MealState {
   int get totalCalories;
   DateTime get selectedDate;
 
-  /// Create a copy of MealState
+  /// Create a copy of MealTrackState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -539,13 +540,13 @@ abstract class _$$ErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$MealStateCopyWithImpl<$Res, _$ErrorImpl>
+    extends _$MealTrackStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
   __$$ErrorImplCopyWithImpl(
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealState
+  /// Create a copy of MealTrackState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -571,7 +572,7 @@ class _$ErrorImpl implements _Error {
 
   @override
   String toString() {
-    return 'MealState.error(message: $message)';
+    return 'MealTrackState.error(message: $message)';
   }
 
   @override
@@ -585,7 +586,7 @@ class _$ErrorImpl implements _Error {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of MealState
+  /// Create a copy of MealTrackState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -674,12 +675,12 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements MealState {
+abstract class _Error implements MealTrackState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;
 
-  /// Create a copy of MealState
+  /// Create a copy of MealTrackState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>

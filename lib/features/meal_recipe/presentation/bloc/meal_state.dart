@@ -9,4 +9,6 @@ class MealState with _$MealState {
   const factory MealState.loading() = _Loading;
   const factory MealState.loaded(List<Meal> meals) = _Loaded;
   const factory MealState.error(String message) = _Error;
+  const factory MealState.detailLoading() = _DetailLoading; 
+  const factory MealState.detailLoaded(Meal meal) = _DetailLoaded; 
 }

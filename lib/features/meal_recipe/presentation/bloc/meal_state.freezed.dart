@@ -22,6 +22,8 @@ mixin _$MealState {
     required TResult Function() loading,
     required TResult Function(List<Meal> meals) loaded,
     required TResult Function(String message) error,
+    required TResult Function() detailLoading,
+    required TResult Function(Meal meal) detailLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$MealState {
     TResult? Function()? loading,
     TResult? Function(List<Meal> meals)? loaded,
     TResult? Function(String message)? error,
+    TResult? Function()? detailLoading,
+    TResult? Function(Meal meal)? detailLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$MealState {
     TResult Function()? loading,
     TResult Function(List<Meal> meals)? loaded,
     TResult Function(String message)? error,
+    TResult Function()? detailLoading,
+    TResult Function(Meal meal)? detailLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +53,8 @@ mixin _$MealState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_DetailLoading value) detailLoading,
+    required TResult Function(_DetailLoaded value) detailLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +63,8 @@ mixin _$MealState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_DetailLoading value)? detailLoading,
+    TResult? Function(_DetailLoaded value)? detailLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +73,8 @@ mixin _$MealState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_DetailLoading value)? detailLoading,
+    TResult Function(_DetailLoaded value)? detailLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -133,6 +145,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(List<Meal> meals) loaded,
     required TResult Function(String message) error,
+    required TResult Function() detailLoading,
+    required TResult Function(Meal meal) detailLoaded,
   }) {
     return initial();
   }
@@ -144,6 +158,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(List<Meal> meals)? loaded,
     TResult? Function(String message)? error,
+    TResult? Function()? detailLoading,
+    TResult? Function(Meal meal)? detailLoaded,
   }) {
     return initial?.call();
   }
@@ -155,6 +171,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(List<Meal> meals)? loaded,
     TResult Function(String message)? error,
+    TResult Function()? detailLoading,
+    TResult Function(Meal meal)? detailLoaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -170,6 +188,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_DetailLoading value) detailLoading,
+    required TResult Function(_DetailLoaded value) detailLoaded,
   }) {
     return initial(this);
   }
@@ -181,6 +201,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_DetailLoading value)? detailLoading,
+    TResult? Function(_DetailLoaded value)? detailLoaded,
   }) {
     return initial?.call(this);
   }
@@ -192,6 +214,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_DetailLoading value)? detailLoading,
+    TResult Function(_DetailLoaded value)? detailLoaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -250,6 +274,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() loading,
     required TResult Function(List<Meal> meals) loaded,
     required TResult Function(String message) error,
+    required TResult Function() detailLoading,
+    required TResult Function(Meal meal) detailLoaded,
   }) {
     return loading();
   }
@@ -261,6 +287,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function(List<Meal> meals)? loaded,
     TResult? Function(String message)? error,
+    TResult? Function()? detailLoading,
+    TResult? Function(Meal meal)? detailLoaded,
   }) {
     return loading?.call();
   }
@@ -272,6 +300,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function(List<Meal> meals)? loaded,
     TResult Function(String message)? error,
+    TResult Function()? detailLoading,
+    TResult Function(Meal meal)? detailLoaded,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -287,6 +317,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_DetailLoading value) detailLoading,
+    required TResult Function(_DetailLoaded value) detailLoaded,
   }) {
     return loading(this);
   }
@@ -298,6 +330,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_DetailLoading value)? detailLoading,
+    TResult? Function(_DetailLoaded value)? detailLoaded,
   }) {
     return loading?.call(this);
   }
@@ -309,6 +343,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_DetailLoading value)? detailLoading,
+    TResult Function(_DetailLoaded value)? detailLoaded,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -400,6 +436,8 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function() loading,
     required TResult Function(List<Meal> meals) loaded,
     required TResult Function(String message) error,
+    required TResult Function() detailLoading,
+    required TResult Function(Meal meal) detailLoaded,
   }) {
     return loaded(meals);
   }
@@ -411,6 +449,8 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? loading,
     TResult? Function(List<Meal> meals)? loaded,
     TResult? Function(String message)? error,
+    TResult? Function()? detailLoading,
+    TResult? Function(Meal meal)? detailLoaded,
   }) {
     return loaded?.call(meals);
   }
@@ -422,6 +462,8 @@ class _$LoadedImpl implements _Loaded {
     TResult Function()? loading,
     TResult Function(List<Meal> meals)? loaded,
     TResult Function(String message)? error,
+    TResult Function()? detailLoading,
+    TResult Function(Meal meal)? detailLoaded,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -437,6 +479,8 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_DetailLoading value) detailLoading,
+    required TResult Function(_DetailLoaded value) detailLoaded,
   }) {
     return loaded(this);
   }
@@ -448,6 +492,8 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_DetailLoading value)? detailLoading,
+    TResult? Function(_DetailLoaded value)? detailLoaded,
   }) {
     return loaded?.call(this);
   }
@@ -459,6 +505,8 @@ class _$LoadedImpl implements _Loaded {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_DetailLoading value)? detailLoading,
+    TResult Function(_DetailLoaded value)? detailLoaded,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -552,6 +600,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function() loading,
     required TResult Function(List<Meal> meals) loaded,
     required TResult Function(String message) error,
+    required TResult Function() detailLoading,
+    required TResult Function(Meal meal) detailLoaded,
   }) {
     return error(message);
   }
@@ -563,6 +613,8 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? loading,
     TResult? Function(List<Meal> meals)? loaded,
     TResult? Function(String message)? error,
+    TResult? Function()? detailLoading,
+    TResult? Function(Meal meal)? detailLoaded,
   }) {
     return error?.call(message);
   }
@@ -574,6 +626,8 @@ class _$ErrorImpl implements _Error {
     TResult Function()? loading,
     TResult Function(List<Meal> meals)? loaded,
     TResult Function(String message)? error,
+    TResult Function()? detailLoading,
+    TResult Function(Meal meal)? detailLoaded,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -589,6 +643,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_DetailLoading value) detailLoading,
+    required TResult Function(_DetailLoaded value) detailLoaded,
   }) {
     return error(this);
   }
@@ -600,6 +656,8 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_DetailLoading value)? detailLoading,
+    TResult? Function(_DetailLoaded value)? detailLoaded,
   }) {
     return error?.call(this);
   }
@@ -611,6 +669,8 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_DetailLoading value)? detailLoading,
+    TResult Function(_DetailLoaded value)? detailLoaded,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -629,5 +689,298 @@ abstract class _Error implements MealState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DetailLoadingImplCopyWith<$Res> {
+  factory _$$DetailLoadingImplCopyWith(
+          _$DetailLoadingImpl value, $Res Function(_$DetailLoadingImpl) then) =
+      __$$DetailLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DetailLoadingImplCopyWithImpl<$Res>
+    extends _$MealStateCopyWithImpl<$Res, _$DetailLoadingImpl>
+    implements _$$DetailLoadingImplCopyWith<$Res> {
+  __$$DetailLoadingImplCopyWithImpl(
+      _$DetailLoadingImpl _value, $Res Function(_$DetailLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MealState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$DetailLoadingImpl implements _DetailLoading {
+  const _$DetailLoadingImpl();
+
+  @override
+  String toString() {
+    return 'MealState.detailLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DetailLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<Meal> meals) loaded,
+    required TResult Function(String message) error,
+    required TResult Function() detailLoading,
+    required TResult Function(Meal meal) detailLoaded,
+  }) {
+    return detailLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Meal> meals)? loaded,
+    TResult? Function(String message)? error,
+    TResult? Function()? detailLoading,
+    TResult? Function(Meal meal)? detailLoaded,
+  }) {
+    return detailLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<Meal> meals)? loaded,
+    TResult Function(String message)? error,
+    TResult Function()? detailLoading,
+    TResult Function(Meal meal)? detailLoaded,
+    required TResult orElse(),
+  }) {
+    if (detailLoading != null) {
+      return detailLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Error value) error,
+    required TResult Function(_DetailLoading value) detailLoading,
+    required TResult Function(_DetailLoaded value) detailLoaded,
+  }) {
+    return detailLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_DetailLoading value)? detailLoading,
+    TResult? Function(_DetailLoaded value)? detailLoaded,
+  }) {
+    return detailLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Error value)? error,
+    TResult Function(_DetailLoading value)? detailLoading,
+    TResult Function(_DetailLoaded value)? detailLoaded,
+    required TResult orElse(),
+  }) {
+    if (detailLoading != null) {
+      return detailLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DetailLoading implements MealState {
+  const factory _DetailLoading() = _$DetailLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$DetailLoadedImplCopyWith<$Res> {
+  factory _$$DetailLoadedImplCopyWith(
+          _$DetailLoadedImpl value, $Res Function(_$DetailLoadedImpl) then) =
+      __$$DetailLoadedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Meal meal});
+}
+
+/// @nodoc
+class __$$DetailLoadedImplCopyWithImpl<$Res>
+    extends _$MealStateCopyWithImpl<$Res, _$DetailLoadedImpl>
+    implements _$$DetailLoadedImplCopyWith<$Res> {
+  __$$DetailLoadedImplCopyWithImpl(
+      _$DetailLoadedImpl _value, $Res Function(_$DetailLoadedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MealState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? meal = null,
+  }) {
+    return _then(_$DetailLoadedImpl(
+      null == meal
+          ? _value.meal
+          : meal // ignore: cast_nullable_to_non_nullable
+              as Meal,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DetailLoadedImpl implements _DetailLoaded {
+  const _$DetailLoadedImpl(this.meal);
+
+  @override
+  final Meal meal;
+
+  @override
+  String toString() {
+    return 'MealState.detailLoaded(meal: $meal)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailLoadedImpl &&
+            (identical(other.meal, meal) || other.meal == meal));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, meal);
+
+  /// Create a copy of MealState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DetailLoadedImplCopyWith<_$DetailLoadedImpl> get copyWith =>
+      __$$DetailLoadedImplCopyWithImpl<_$DetailLoadedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<Meal> meals) loaded,
+    required TResult Function(String message) error,
+    required TResult Function() detailLoading,
+    required TResult Function(Meal meal) detailLoaded,
+  }) {
+    return detailLoaded(meal);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Meal> meals)? loaded,
+    TResult? Function(String message)? error,
+    TResult? Function()? detailLoading,
+    TResult? Function(Meal meal)? detailLoaded,
+  }) {
+    return detailLoaded?.call(meal);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<Meal> meals)? loaded,
+    TResult Function(String message)? error,
+    TResult Function()? detailLoading,
+    TResult Function(Meal meal)? detailLoaded,
+    required TResult orElse(),
+  }) {
+    if (detailLoaded != null) {
+      return detailLoaded(meal);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Error value) error,
+    required TResult Function(_DetailLoading value) detailLoading,
+    required TResult Function(_DetailLoaded value) detailLoaded,
+  }) {
+    return detailLoaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_DetailLoading value)? detailLoading,
+    TResult? Function(_DetailLoaded value)? detailLoaded,
+  }) {
+    return detailLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Error value)? error,
+    TResult Function(_DetailLoading value)? detailLoading,
+    TResult Function(_DetailLoaded value)? detailLoaded,
+    required TResult orElse(),
+  }) {
+    if (detailLoaded != null) {
+      return detailLoaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DetailLoaded implements MealState {
+  const factory _DetailLoaded(final Meal meal) = _$DetailLoadedImpl;
+
+  Meal get meal;
+
+  /// Create a copy of MealState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DetailLoadedImplCopyWith<_$DetailLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

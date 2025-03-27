@@ -3,9 +3,9 @@ import '../../domain/entities/meal.dart';
 part 'meal_state.freezed.dart';
 
 @freezed
-class MealState with _$MealState {
-  const factory MealState.initial() = _Initial;
-  const factory MealState.loading() = _Loading;
-  const factory MealState.loaded(List<MealTrack> meals, int totalCalories ,DateTime selectedDate,) = _Loaded;
-  const factory MealState.error(String message) = _Error;
+class MealTrackState with _$MealTrackState {
+  const factory MealTrackState.initial() = _Initial;
+  const factory MealTrackState.loading() = _Loading;
+  const factory MealTrackState.loaded(List<MealTrack> meals, int totalCalories ,DateTime selectedDate,) = _Loaded;
+  const factory MealTrackState.error(String message) = _Error;
 }
