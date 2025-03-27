@@ -12,7 +12,7 @@ import 'injection.dart' as di;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  Hive.registerAdapter(MealModelAdapter());
+  Hive.registerAdapter(MealTrackModelAdapter());
   await di.init();
   runApp(const MyApp());
 }

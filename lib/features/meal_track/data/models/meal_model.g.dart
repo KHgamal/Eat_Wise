@@ -6,7 +6,7 @@ part of 'meal_model.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class MealModelAdapter extends TypeAdapter<MealTrackModel> {
+class MealTrackModelAdapter extends TypeAdapter<MealTrackModel> {
   @override
   final int typeId = 0;
 
@@ -47,7 +47,7 @@ class MealModelAdapter extends TypeAdapter<MealTrackModel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is MealModelAdapter &&
+      other is MealTrackModelAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
