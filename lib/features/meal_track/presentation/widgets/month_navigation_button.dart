@@ -1,5 +1,5 @@
-import 'package:eat_wise/features/meal/presentation/bloc/meal_bloc.dart';
-import 'package:eat_wise/features/meal/presentation/bloc/meal_event.dart';
+import 'package:eat_wise/features/meal_track/presentation/bloc/meal_bloc.dart';
+import 'package:eat_wise/features/meal_track/presentation/bloc/meal_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,5 +1,5 @@
 import 'package:eat_wise/core/common/styles/text_style.dart';
-import 'package:eat_wise/features/meal/presentation/widgets/month_navigation_button.dart';
+import 'package:eat_wise/features/meal_track/presentation/widgets/month_navigation_button.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

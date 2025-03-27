@@ -1,7 +1,7 @@
 
 import 'package:eat_wise/core/common/styles/colors_app.dart';
 import 'package:eat_wise/core/common/styles/media.dart';
-import 'package:eat_wise/features/meal/presentation/views/home_page.dart';
+import 'package:eat_wise/features/meal_track/presentation/views/home_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 

@@ -1,6 +1,6 @@
-import 'package:eat_wise/features/meal/presentation/widgets/add_meal_floating_button.dart';
-import 'package:eat_wise/features/meal/presentation/widgets/header.dart';
-import 'package:eat_wise/features/meal/presentation/widgets/meal_bloc.dart';
+import 'package:eat_wise/features/meal_track/presentation/widgets/add_meal_floating_button.dart';
+import 'package:eat_wise/features/meal_track/presentation/widgets/header.dart';
+import 'package:eat_wise/features/meal_track/presentation/widgets/meal_bloc.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

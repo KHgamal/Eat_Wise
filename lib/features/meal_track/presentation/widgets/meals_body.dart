@@ -1,6 +1,6 @@
-import 'package:eat_wise/features/meal/domain/entities/meal.dart';
-import 'package:eat_wise/features/meal/presentation/widgets/date_calender.dart';
-import 'package:eat_wise/features/meal/presentation/widgets/meal_list.dart';
+import 'package:eat_wise/features/meal_track/domain/entities/meal.dart';
+import 'package:eat_wise/features/meal_track/presentation/widgets/date_calender.dart';
+import 'package:eat_wise/features/meal_track/presentation/widgets/meal_list.dart';
 import 'package:flutter/material.dart';
 
 class MealsBody extends StatelessWidget {
