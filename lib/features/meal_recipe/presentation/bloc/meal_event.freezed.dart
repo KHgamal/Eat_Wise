@@ -21,6 +21,7 @@ mixin _$MealEvent {
     required TResult Function(String query) search,
     required TResult Function(String category) filterByCategory,
     required TResult Function(String mealId) fetchMealDetails,
+    required TResult Function() resetToLastLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$MealEvent {
     TResult? Function(String query)? search,
     TResult? Function(String category)? filterByCategory,
     TResult? Function(String mealId)? fetchMealDetails,
+    TResult? Function()? resetToLastLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$MealEvent {
     TResult Function(String query)? search,
     TResult Function(String category)? filterByCategory,
     TResult Function(String mealId)? fetchMealDetails,
+    TResult Function()? resetToLastLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$MealEvent {
     required TResult Function(_Search value) search,
     required TResult Function(_FilterByCategory value) filterByCategory,
     required TResult Function(_FetchMealDetails value) fetchMealDetails,
+    required TResult Function(_ResetToLastLoaded value) resetToLastLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$MealEvent {
     TResult? Function(_Search value)? search,
     TResult? Function(_FilterByCategory value)? filterByCategory,
     TResult? Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult? Function(_ResetToLastLoaded value)? resetToLastLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$MealEvent {
     TResult Function(_Search value)? search,
     TResult Function(_FilterByCategory value)? filterByCategory,
     TResult Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult Function(_ResetToLastLoaded value)? resetToLastLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -153,6 +159,7 @@ class _$SearchImpl implements _Search {
     required TResult Function(String query) search,
     required TResult Function(String category) filterByCategory,
     required TResult Function(String mealId) fetchMealDetails,
+    required TResult Function() resetToLastLoaded,
   }) {
     return search(query);
   }
@@ -163,6 +170,7 @@ class _$SearchImpl implements _Search {
     TResult? Function(String query)? search,
     TResult? Function(String category)? filterByCategory,
     TResult? Function(String mealId)? fetchMealDetails,
+    TResult? Function()? resetToLastLoaded,
   }) {
     return search?.call(query);
   }
@@ -173,6 +181,7 @@ class _$SearchImpl implements _Search {
     TResult Function(String query)? search,
     TResult Function(String category)? filterByCategory,
     TResult Function(String mealId)? fetchMealDetails,
+    TResult Function()? resetToLastLoaded,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -187,6 +196,7 @@ class _$SearchImpl implements _Search {
     required TResult Function(_Search value) search,
     required TResult Function(_FilterByCategory value) filterByCategory,
     required TResult Function(_FetchMealDetails value) fetchMealDetails,
+    required TResult Function(_ResetToLastLoaded value) resetToLastLoaded,
   }) {
     return search(this);
   }
@@ -197,6 +207,7 @@ class _$SearchImpl implements _Search {
     TResult? Function(_Search value)? search,
     TResult? Function(_FilterByCategory value)? filterByCategory,
     TResult? Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult? Function(_ResetToLastLoaded value)? resetToLastLoaded,
   }) {
     return search?.call(this);
   }
@@ -207,6 +218,7 @@ class _$SearchImpl implements _Search {
     TResult Function(_Search value)? search,
     TResult Function(_FilterByCategory value)? filterByCategory,
     TResult Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult Function(_ResetToLastLoaded value)? resetToLastLoaded,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -301,6 +313,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
     required TResult Function(String query) search,
     required TResult Function(String category) filterByCategory,
     required TResult Function(String mealId) fetchMealDetails,
+    required TResult Function() resetToLastLoaded,
   }) {
     return filterByCategory(category);
   }
@@ -311,6 +324,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
     TResult? Function(String query)? search,
     TResult? Function(String category)? filterByCategory,
     TResult? Function(String mealId)? fetchMealDetails,
+    TResult? Function()? resetToLastLoaded,
   }) {
     return filterByCategory?.call(category);
   }
@@ -321,6 +335,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
     TResult Function(String query)? search,
     TResult Function(String category)? filterByCategory,
     TResult Function(String mealId)? fetchMealDetails,
+    TResult Function()? resetToLastLoaded,
     required TResult orElse(),
   }) {
     if (filterByCategory != null) {
@@ -335,6 +350,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
     required TResult Function(_Search value) search,
     required TResult Function(_FilterByCategory value) filterByCategory,
     required TResult Function(_FetchMealDetails value) fetchMealDetails,
+    required TResult Function(_ResetToLastLoaded value) resetToLastLoaded,
   }) {
     return filterByCategory(this);
   }
@@ -345,6 +361,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
     TResult? Function(_Search value)? search,
     TResult? Function(_FilterByCategory value)? filterByCategory,
     TResult? Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult? Function(_ResetToLastLoaded value)? resetToLastLoaded,
   }) {
     return filterByCategory?.call(this);
   }
@@ -355,6 +372,7 @@ class _$FilterByCategoryImpl implements _FilterByCategory {
     TResult Function(_Search value)? search,
     TResult Function(_FilterByCategory value)? filterByCategory,
     TResult Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult Function(_ResetToLastLoaded value)? resetToLastLoaded,
     required TResult orElse(),
   }) {
     if (filterByCategory != null) {
@@ -449,6 +467,7 @@ class _$FetchMealDetailsImpl implements _FetchMealDetails {
     required TResult Function(String query) search,
     required TResult Function(String category) filterByCategory,
     required TResult Function(String mealId) fetchMealDetails,
+    required TResult Function() resetToLastLoaded,
   }) {
     return fetchMealDetails(mealId);
   }
@@ -459,6 +478,7 @@ class _$FetchMealDetailsImpl implements _FetchMealDetails {
     TResult? Function(String query)? search,
     TResult? Function(String category)? filterByCategory,
     TResult? Function(String mealId)? fetchMealDetails,
+    TResult? Function()? resetToLastLoaded,
   }) {
     return fetchMealDetails?.call(mealId);
   }
@@ -469,6 +489,7 @@ class _$FetchMealDetailsImpl implements _FetchMealDetails {
     TResult Function(String query)? search,
     TResult Function(String category)? filterByCategory,
     TResult Function(String mealId)? fetchMealDetails,
+    TResult Function()? resetToLastLoaded,
     required TResult orElse(),
   }) {
     if (fetchMealDetails != null) {
@@ -483,6 +504,7 @@ class _$FetchMealDetailsImpl implements _FetchMealDetails {
     required TResult Function(_Search value) search,
     required TResult Function(_FilterByCategory value) filterByCategory,
     required TResult Function(_FetchMealDetails value) fetchMealDetails,
+    required TResult Function(_ResetToLastLoaded value) resetToLastLoaded,
   }) {
     return fetchMealDetails(this);
   }
@@ -493,6 +515,7 @@ class _$FetchMealDetailsImpl implements _FetchMealDetails {
     TResult? Function(_Search value)? search,
     TResult? Function(_FilterByCategory value)? filterByCategory,
     TResult? Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult? Function(_ResetToLastLoaded value)? resetToLastLoaded,
   }) {
     return fetchMealDetails?.call(this);
   }
@@ -503,6 +526,7 @@ class _$FetchMealDetailsImpl implements _FetchMealDetails {
     TResult Function(_Search value)? search,
     TResult Function(_FilterByCategory value)? filterByCategory,
     TResult Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult Function(_ResetToLastLoaded value)? resetToLastLoaded,
     required TResult orElse(),
   }) {
     if (fetchMealDetails != null) {
@@ -522,4 +546,121 @@ abstract class _FetchMealDetails implements MealEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchMealDetailsImplCopyWith<_$FetchMealDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ResetToLastLoadedImplCopyWith<$Res> {
+  factory _$$ResetToLastLoadedImplCopyWith(_$ResetToLastLoadedImpl value,
+          $Res Function(_$ResetToLastLoadedImpl) then) =
+      __$$ResetToLastLoadedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ResetToLastLoadedImplCopyWithImpl<$Res>
+    extends _$MealEventCopyWithImpl<$Res, _$ResetToLastLoadedImpl>
+    implements _$$ResetToLastLoadedImplCopyWith<$Res> {
+  __$$ResetToLastLoadedImplCopyWithImpl(_$ResetToLastLoadedImpl _value,
+      $Res Function(_$ResetToLastLoadedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MealEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ResetToLastLoadedImpl implements _ResetToLastLoaded {
+  const _$ResetToLastLoadedImpl();
+
+  @override
+  String toString() {
+    return 'MealEvent.resetToLastLoaded()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ResetToLastLoadedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String query) search,
+    required TResult Function(String category) filterByCategory,
+    required TResult Function(String mealId) fetchMealDetails,
+    required TResult Function() resetToLastLoaded,
+  }) {
+    return resetToLastLoaded();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String query)? search,
+    TResult? Function(String category)? filterByCategory,
+    TResult? Function(String mealId)? fetchMealDetails,
+    TResult? Function()? resetToLastLoaded,
+  }) {
+    return resetToLastLoaded?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String query)? search,
+    TResult Function(String category)? filterByCategory,
+    TResult Function(String mealId)? fetchMealDetails,
+    TResult Function()? resetToLastLoaded,
+    required TResult orElse(),
+  }) {
+    if (resetToLastLoaded != null) {
+      return resetToLastLoaded();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Search value) search,
+    required TResult Function(_FilterByCategory value) filterByCategory,
+    required TResult Function(_FetchMealDetails value) fetchMealDetails,
+    required TResult Function(_ResetToLastLoaded value) resetToLastLoaded,
+  }) {
+    return resetToLastLoaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Search value)? search,
+    TResult? Function(_FilterByCategory value)? filterByCategory,
+    TResult? Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult? Function(_ResetToLastLoaded value)? resetToLastLoaded,
+  }) {
+    return resetToLastLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Search value)? search,
+    TResult Function(_FilterByCategory value)? filterByCategory,
+    TResult Function(_FetchMealDetails value)? fetchMealDetails,
+    TResult Function(_ResetToLastLoaded value)? resetToLastLoaded,
+    required TResult orElse(),
+  }) {
+    if (resetToLastLoaded != null) {
+      return resetToLastLoaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResetToLastLoaded implements MealEvent {
+  const factory _ResetToLastLoaded() = _$ResetToLastLoadedImpl;
 }
