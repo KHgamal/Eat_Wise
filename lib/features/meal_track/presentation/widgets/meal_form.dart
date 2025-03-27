@@ -116,25 +116,14 @@ class _MealFormState extends State<MealForm> {
                 },
                 decoration: const InputDecoration(
                   labelText: "Select Date & Time",
-                  // hintText: "Pick a date & time",
                   suffixIcon: Icon(Icons.calendar_today),
-                  // border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
                 ),
                 controller: TextEditingController(
                   text: DateFormat('MMM dd, yyyy - hh:mm a').format(_time),
                 ),
               ),
               ElevatedButton(
-                onPressed: _submit, // Add delete function here
-                style: ElevatedButton.styleFrom(
-                  foregroundColor: AppColors.orange,
-                  backgroundColor: Colors.transparent,
-                  elevation: 0,
-                  side: const BorderSide(color: AppColors.orange),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.r),
-                  ),
-                ),
+                onPressed: _submit, 
                 child: const Text("Add Meal"),
               ),
             ],

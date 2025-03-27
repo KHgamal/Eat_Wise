@@ -1,4 +1,3 @@
-import 'package:eat_wise/core/common/styles/colors_app.dart';
 import 'package:eat_wise/features/meal_track/data/models/meal_model.dart';
 import 'package:eat_wise/features/meal_track/presentation/bloc/meal_bloc.dart';
 import 'package:eat_wise/features/meal_track/presentation/bloc/meal_event.dart';
@@ -6,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'core/common/styles/theme.dart';
+import 'features/meal_recipe/presentation/bloc/meal_bloc.dart';
 import 'features/splash_screen/splash_view.dart';
 import 'injection.dart' as di;
 
@@ -22,38 +23,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => di.sl<MealBloc>()..add(const MealEvent.loadMeals()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<MealTrackBloc>(
+          create: (_) =>
+              di.sl<MealTrackBloc>()..add(const MealTrackEvent.loadMeals()),
+        ),
+        BlocProvider(
+          create: (_) => di.sl<MealBloc>(),
+        ),
+      ],
       child: ScreenUtilInit(
           designSize: const Size(360, 690),
           minTextAdapt: true,
           splitScreenMode: true,
-
           builder: (_, child) {
             return MaterialApp(
-            
               debugShowCheckedModeBanner: false,
               title: 'Meal Tracker',
-              theme: ThemeData(
-                useMaterial3: false,
-                primarySwatch: AppColors.lightGreenSwatch,
-                inputDecorationTheme: InputDecorationTheme(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.r),
-                    borderSide:  BorderSide(color:AppColors.msgContainer, width: 2), // Remove default border
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.r),
-                    borderSide: BorderSide(color: AppColors.msgContainer, width: 2),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.r),
-                    borderSide: BorderSide(color: AppColors.msgContainer,width: 1),
-                  ),
-                  labelStyle: const TextStyle(color: AppColors.orange)
-                 // contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
-                ),
-              ),
+              theme: appTheme,
               home: const SplashScreen(),
             );
           }),

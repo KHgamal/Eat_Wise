@@ -21,7 +21,7 @@ class DayContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.read<MealBloc>().add(MealEvent.selectDate(date));
+        context.read<MealTrackBloc>().add(MealTrackEvent.selectDate(date));
       },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 4),

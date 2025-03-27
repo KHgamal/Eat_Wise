@@ -49,18 +49,9 @@ class MealList extends StatelessWidget {
                     ),
                     SizedBox(height: 8.h),
                     ElevatedButton(
-                      onPressed: () => context.read<MealBloc>().add(
-                          MealEvent.deleteMeal(
-                              meal.id)), // Add delete function here
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: AppColors.orange ,
-                        backgroundColor: Colors.transparent,
-                        elevation: 0,
-                        side: const BorderSide(color:AppColors.orange),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.r),
-                        ),
-                      ),
+                      onPressed: () => context.read<MealTrackBloc>().add(
+                          MealTrackEvent.deleteMeal(
+                              meal.id)),
                       child: const Text("Delete"),
                     ),
                   ],

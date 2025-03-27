@@ -28,7 +28,7 @@ class MonthNavigationButton extends StatelessWidget {
           isNext ? selectedDate.month + 1 : selectedDate.month - 1,
          1, 
         );
-        context.read<MealBloc>().add(MealEvent.selectDate(newMonth));
+        context.read<MealTrackBloc>().add(MealTrackEvent.selectDate(newMonth));
       },
     );
   }

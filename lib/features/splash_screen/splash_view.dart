@@ -1,11 +1,11 @@
-
 import 'package:eat_wise/core/common/styles/colors_app.dart';
 import 'package:eat_wise/core/common/styles/media.dart';
-import 'package:eat_wise/features/meal_track/presentation/views/home_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../core/common/widgets/bottom_nav_bar.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -27,7 +27,7 @@ class SplashScreenState extends State<SplashScreen> {
     });
 
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(context,  MaterialPageRoute(builder: (BuildContext context) => const HomePage())); 
+      Navigator.pushReplacement(context,  MaterialPageRoute(builder: (BuildContext context) => const CustomBottomNavBar())); 
     });
   }
 

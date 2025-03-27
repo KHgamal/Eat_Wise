@@ -13,7 +13,7 @@ class FilterMenuButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopupMenuButton<String>(
       onSelected: (value) {
-        context.read<MealBloc>().add(MealEvent.sortMeals(value));
+        context.read<MealTrackBloc>().add(MealTrackEvent.sortMeals(value));
       },
       icon: const Icon(Icons.sort , color: AppColors.darkGreen,), // Change this to any icon you want
       itemBuilder: (context) => [
