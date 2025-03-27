@@ -1,0 +1,2 @@
+C:/Users/Dell/StudioProjects/eat_wise/android/app/.cxx/RelWithDebInfo/6w233p6n/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/Dell/StudioProjects/eat_wise/android/app/.cxx/RelWithDebInfo/6w233p6n/x86_64/CMakeFiles/rebuild_cache.dir

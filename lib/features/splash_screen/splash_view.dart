@@ -1,8 +1,11 @@
+
 import 'package:eat_wise/core/common/styles/colors_app.dart';
 import 'package:eat_wise/core/common/styles/media.dart';
 import 'package:eat_wise/features/meal/presentation/views/home_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
+
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -38,7 +41,7 @@ class SplashScreenState extends State<SplashScreen> {
             child: AnimatedOpacity(
               duration: const Duration(seconds: 2),
               opacity: _opacity,
-              child: Image.asset(Assets.assetsImagesBitelog, width: 150, height: 150), 
+              child: Image.asset(Assets.assetsImagesBitelog, width: 150.w, height: 150.h),
             ),
           ),
         const Center(child:  Text("Eat Wise" , style: TextStyle(fontSize: 40 , color: AppColors.orange),))
