@@ -1,4 +1,5 @@
 import 'package:hive/hive.dart';
+
 part 'meal_model.g.dart';
 
 @HiveType(typeId: 0)
@@ -16,13 +17,13 @@ class MealTrackModel extends HiveObject {
   final DateTime time;
 
   @HiveField(4)
-  final String? photoPath;
+  final String mealType;
 
-  MealTrackModel({
+  MealTrackModel( {
     required this.id,
     required this.name,
     required this.calories,
     required this.time,
-    this.photoPath,
+    required this.mealType
   });
 }

@@ -21,7 +21,6 @@ mixin _$MealTrackEvent {
     required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
-    required TResult Function(String sortBy) sortMeals,
     required TResult Function(DateTime date) selectDate,
   }) =>
       throw _privateConstructorUsedError;
@@ -30,7 +29,6 @@ mixin _$MealTrackEvent {
     TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
-    TResult? Function(String sortBy)? sortMeals,
     TResult? Function(DateTime date)? selectDate,
   }) =>
       throw _privateConstructorUsedError;
@@ -39,7 +37,6 @@ mixin _$MealTrackEvent {
     TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
-    TResult Function(String sortBy)? sortMeals,
     TResult Function(DateTime date)? selectDate,
     required TResult orElse(),
   }) =>
@@ -49,7 +46,6 @@ mixin _$MealTrackEvent {
     required TResult Function(_AddMeal value) addMeal,
     required TResult Function(_DeleteMeal value) deleteMeal,
     required TResult Function(_LoadMeals value) loadMeals,
-    required TResult Function(_SortMeals value) sortMeals,
     required TResult Function(_SelectDate value) selectDate,
   }) =>
       throw _privateConstructorUsedError;
@@ -58,7 +54,6 @@ mixin _$MealTrackEvent {
     TResult? Function(_AddMeal value)? addMeal,
     TResult? Function(_DeleteMeal value)? deleteMeal,
     TResult? Function(_LoadMeals value)? loadMeals,
-    TResult? Function(_SortMeals value)? sortMeals,
     TResult? Function(_SelectDate value)? selectDate,
   }) =>
       throw _privateConstructorUsedError;
@@ -67,7 +62,6 @@ mixin _$MealTrackEvent {
     TResult Function(_AddMeal value)? addMeal,
     TResult Function(_DeleteMeal value)? deleteMeal,
     TResult Function(_LoadMeals value)? loadMeals,
-    TResult Function(_SortMeals value)? sortMeals,
     TResult Function(_SelectDate value)? selectDate,
     required TResult orElse(),
   }) =>
@@ -166,7 +160,6 @@ class _$AddMealImpl implements _AddMeal {
     required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
-    required TResult Function(String sortBy) sortMeals,
     required TResult Function(DateTime date) selectDate,
   }) {
     return addMeal(meal);
@@ -178,7 +171,6 @@ class _$AddMealImpl implements _AddMeal {
     TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
-    TResult? Function(String sortBy)? sortMeals,
     TResult? Function(DateTime date)? selectDate,
   }) {
     return addMeal?.call(meal);
@@ -190,7 +182,6 @@ class _$AddMealImpl implements _AddMeal {
     TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
-    TResult Function(String sortBy)? sortMeals,
     TResult Function(DateTime date)? selectDate,
     required TResult orElse(),
   }) {
@@ -206,7 +197,6 @@ class _$AddMealImpl implements _AddMeal {
     required TResult Function(_AddMeal value) addMeal,
     required TResult Function(_DeleteMeal value) deleteMeal,
     required TResult Function(_LoadMeals value) loadMeals,
-    required TResult Function(_SortMeals value) sortMeals,
     required TResult Function(_SelectDate value) selectDate,
   }) {
     return addMeal(this);
@@ -218,7 +208,6 @@ class _$AddMealImpl implements _AddMeal {
     TResult? Function(_AddMeal value)? addMeal,
     TResult? Function(_DeleteMeal value)? deleteMeal,
     TResult? Function(_LoadMeals value)? loadMeals,
-    TResult? Function(_SortMeals value)? sortMeals,
     TResult? Function(_SelectDate value)? selectDate,
   }) {
     return addMeal?.call(this);
@@ -230,7 +219,6 @@ class _$AddMealImpl implements _AddMeal {
     TResult Function(_AddMeal value)? addMeal,
     TResult Function(_DeleteMeal value)? deleteMeal,
     TResult Function(_LoadMeals value)? loadMeals,
-    TResult Function(_SortMeals value)? sortMeals,
     TResult Function(_SelectDate value)? selectDate,
     required TResult orElse(),
   }) {
@@ -324,7 +312,6 @@ class _$DeleteMealImpl implements _DeleteMeal {
     required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
-    required TResult Function(String sortBy) sortMeals,
     required TResult Function(DateTime date) selectDate,
   }) {
     return deleteMeal(id);
@@ -336,7 +323,6 @@ class _$DeleteMealImpl implements _DeleteMeal {
     TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
-    TResult? Function(String sortBy)? sortMeals,
     TResult? Function(DateTime date)? selectDate,
   }) {
     return deleteMeal?.call(id);
@@ -348,7 +334,6 @@ class _$DeleteMealImpl implements _DeleteMeal {
     TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
-    TResult Function(String sortBy)? sortMeals,
     TResult Function(DateTime date)? selectDate,
     required TResult orElse(),
   }) {
@@ -364,7 +349,6 @@ class _$DeleteMealImpl implements _DeleteMeal {
     required TResult Function(_AddMeal value) addMeal,
     required TResult Function(_DeleteMeal value) deleteMeal,
     required TResult Function(_LoadMeals value) loadMeals,
-    required TResult Function(_SortMeals value) sortMeals,
     required TResult Function(_SelectDate value) selectDate,
   }) {
     return deleteMeal(this);
@@ -376,7 +360,6 @@ class _$DeleteMealImpl implements _DeleteMeal {
     TResult? Function(_AddMeal value)? addMeal,
     TResult? Function(_DeleteMeal value)? deleteMeal,
     TResult? Function(_LoadMeals value)? loadMeals,
-    TResult? Function(_SortMeals value)? sortMeals,
     TResult? Function(_SelectDate value)? selectDate,
   }) {
     return deleteMeal?.call(this);
@@ -388,7 +371,6 @@ class _$DeleteMealImpl implements _DeleteMeal {
     TResult Function(_AddMeal value)? addMeal,
     TResult Function(_DeleteMeal value)? deleteMeal,
     TResult Function(_LoadMeals value)? loadMeals,
-    TResult Function(_SortMeals value)? sortMeals,
     TResult Function(_SelectDate value)? selectDate,
     required TResult orElse(),
   }) {
@@ -455,7 +437,6 @@ class _$LoadMealsImpl implements _LoadMeals {
     required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
-    required TResult Function(String sortBy) sortMeals,
     required TResult Function(DateTime date) selectDate,
   }) {
     return loadMeals();
@@ -467,7 +448,6 @@ class _$LoadMealsImpl implements _LoadMeals {
     TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
-    TResult? Function(String sortBy)? sortMeals,
     TResult? Function(DateTime date)? selectDate,
   }) {
     return loadMeals?.call();
@@ -479,7 +459,6 @@ class _$LoadMealsImpl implements _LoadMeals {
     TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
-    TResult Function(String sortBy)? sortMeals,
     TResult Function(DateTime date)? selectDate,
     required TResult orElse(),
   }) {
@@ -495,7 +474,6 @@ class _$LoadMealsImpl implements _LoadMeals {
     required TResult Function(_AddMeal value) addMeal,
     required TResult Function(_DeleteMeal value) deleteMeal,
     required TResult Function(_LoadMeals value) loadMeals,
-    required TResult Function(_SortMeals value) sortMeals,
     required TResult Function(_SelectDate value) selectDate,
   }) {
     return loadMeals(this);
@@ -507,7 +485,6 @@ class _$LoadMealsImpl implements _LoadMeals {
     TResult? Function(_AddMeal value)? addMeal,
     TResult? Function(_DeleteMeal value)? deleteMeal,
     TResult? Function(_LoadMeals value)? loadMeals,
-    TResult? Function(_SortMeals value)? sortMeals,
     TResult? Function(_SelectDate value)? selectDate,
   }) {
     return loadMeals?.call(this);
@@ -519,7 +496,6 @@ class _$LoadMealsImpl implements _LoadMeals {
     TResult Function(_AddMeal value)? addMeal,
     TResult Function(_DeleteMeal value)? deleteMeal,
     TResult Function(_LoadMeals value)? loadMeals,
-    TResult Function(_SortMeals value)? sortMeals,
     TResult Function(_SelectDate value)? selectDate,
     required TResult orElse(),
   }) {
@@ -532,164 +508,6 @@ class _$LoadMealsImpl implements _LoadMeals {
 
 abstract class _LoadMeals implements MealTrackEvent {
   const factory _LoadMeals() = _$LoadMealsImpl;
-}
-
-/// @nodoc
-abstract class _$$SortMealsImplCopyWith<$Res> {
-  factory _$$SortMealsImplCopyWith(
-          _$SortMealsImpl value, $Res Function(_$SortMealsImpl) then) =
-      __$$SortMealsImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String sortBy});
-}
-
-/// @nodoc
-class __$$SortMealsImplCopyWithImpl<$Res>
-    extends _$MealTrackEventCopyWithImpl<$Res, _$SortMealsImpl>
-    implements _$$SortMealsImplCopyWith<$Res> {
-  __$$SortMealsImplCopyWithImpl(
-      _$SortMealsImpl _value, $Res Function(_$SortMealsImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? sortBy = null,
-  }) {
-    return _then(_$SortMealsImpl(
-      null == sortBy
-          ? _value.sortBy
-          : sortBy // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SortMealsImpl implements _SortMeals {
-  const _$SortMealsImpl(this.sortBy);
-
-  @override
-  final String sortBy;
-
-  @override
-  String toString() {
-    return 'MealTrackEvent.sortMeals(sortBy: $sortBy)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SortMealsImpl &&
-            (identical(other.sortBy, sortBy) || other.sortBy == sortBy));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, sortBy);
-
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SortMealsImplCopyWith<_$SortMealsImpl> get copyWith =>
-      __$$SortMealsImplCopyWithImpl<_$SortMealsImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(MealTrack meal) addMeal,
-    required TResult Function(String id) deleteMeal,
-    required TResult Function() loadMeals,
-    required TResult Function(String sortBy) sortMeals,
-    required TResult Function(DateTime date) selectDate,
-  }) {
-    return sortMeals(sortBy);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(MealTrack meal)? addMeal,
-    TResult? Function(String id)? deleteMeal,
-    TResult? Function()? loadMeals,
-    TResult? Function(String sortBy)? sortMeals,
-    TResult? Function(DateTime date)? selectDate,
-  }) {
-    return sortMeals?.call(sortBy);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(MealTrack meal)? addMeal,
-    TResult Function(String id)? deleteMeal,
-    TResult Function()? loadMeals,
-    TResult Function(String sortBy)? sortMeals,
-    TResult Function(DateTime date)? selectDate,
-    required TResult orElse(),
-  }) {
-    if (sortMeals != null) {
-      return sortMeals(sortBy);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_AddMeal value) addMeal,
-    required TResult Function(_DeleteMeal value) deleteMeal,
-    required TResult Function(_LoadMeals value) loadMeals,
-    required TResult Function(_SortMeals value) sortMeals,
-    required TResult Function(_SelectDate value) selectDate,
-  }) {
-    return sortMeals(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_AddMeal value)? addMeal,
-    TResult? Function(_DeleteMeal value)? deleteMeal,
-    TResult? Function(_LoadMeals value)? loadMeals,
-    TResult? Function(_SortMeals value)? sortMeals,
-    TResult? Function(_SelectDate value)? selectDate,
-  }) {
-    return sortMeals?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_AddMeal value)? addMeal,
-    TResult Function(_DeleteMeal value)? deleteMeal,
-    TResult Function(_LoadMeals value)? loadMeals,
-    TResult Function(_SortMeals value)? sortMeals,
-    TResult Function(_SelectDate value)? selectDate,
-    required TResult orElse(),
-  }) {
-    if (sortMeals != null) {
-      return sortMeals(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _SortMeals implements MealTrackEvent {
-  const factory _SortMeals(final String sortBy) = _$SortMealsImpl;
-
-  String get sortBy;
-
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SortMealsImplCopyWith<_$SortMealsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -763,7 +581,6 @@ class _$SelectDateImpl implements _SelectDate {
     required TResult Function(MealTrack meal) addMeal,
     required TResult Function(String id) deleteMeal,
     required TResult Function() loadMeals,
-    required TResult Function(String sortBy) sortMeals,
     required TResult Function(DateTime date) selectDate,
   }) {
     return selectDate(date);
@@ -775,7 +592,6 @@ class _$SelectDateImpl implements _SelectDate {
     TResult? Function(MealTrack meal)? addMeal,
     TResult? Function(String id)? deleteMeal,
     TResult? Function()? loadMeals,
-    TResult? Function(String sortBy)? sortMeals,
     TResult? Function(DateTime date)? selectDate,
   }) {
     return selectDate?.call(date);
@@ -787,7 +603,6 @@ class _$SelectDateImpl implements _SelectDate {
     TResult Function(MealTrack meal)? addMeal,
     TResult Function(String id)? deleteMeal,
     TResult Function()? loadMeals,
-    TResult Function(String sortBy)? sortMeals,
     TResult Function(DateTime date)? selectDate,
     required TResult orElse(),
   }) {
@@ -803,7 +618,6 @@ class _$SelectDateImpl implements _SelectDate {
     required TResult Function(_AddMeal value) addMeal,
     required TResult Function(_DeleteMeal value) deleteMeal,
     required TResult Function(_LoadMeals value) loadMeals,
-    required TResult Function(_SortMeals value) sortMeals,
     required TResult Function(_SelectDate value) selectDate,
   }) {
     return selectDate(this);
@@ -815,7 +629,6 @@ class _$SelectDateImpl implements _SelectDate {
     TResult? Function(_AddMeal value)? addMeal,
     TResult? Function(_DeleteMeal value)? deleteMeal,
     TResult? Function(_LoadMeals value)? loadMeals,
-    TResult? Function(_SortMeals value)? sortMeals,
     TResult? Function(_SelectDate value)? selectDate,
   }) {
     return selectDate?.call(this);
@@ -827,7 +640,6 @@ class _$SelectDateImpl implements _SelectDate {
     TResult Function(_AddMeal value)? addMeal,
     TResult Function(_DeleteMeal value)? deleteMeal,
     TResult Function(_LoadMeals value)? loadMeals,
-    TResult Function(_SortMeals value)? sortMeals,
     TResult Function(_SelectDate value)? selectDate,
     required TResult orElse(),
   }) {

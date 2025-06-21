@@ -7,6 +7,5 @@ class MealTrackEvent with _$MealTrackEvent {
   const factory MealTrackEvent.addMeal(MealTrack meal) = _AddMeal;
   const factory MealTrackEvent.deleteMeal(String id) = _DeleteMeal;
   const factory MealTrackEvent.loadMeals() = _LoadMeals;
-  const factory MealTrackEvent.sortMeals(String sortBy) = _SortMeals;
   const factory MealTrackEvent.selectDate(DateTime date) = _SelectDate;
 }

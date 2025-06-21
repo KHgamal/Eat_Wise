@@ -1,4 +1,4 @@
-import 'package:eat_wise/features/meal_track/presentation/views/tracked_meal_view.dart';
+import 'package:eat_wise/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../features/meal_recipe/presentation/views/meal_category_view.dart';
@@ -26,8 +26,8 @@ class CustomBottomNavBarState extends State<CustomBottomNavBar> {
   Widget build(BuildContext context) {
 
     final List<Widget> screens = [
-      const TrackedMealPage(),
-      MealCategoryScreen(),
+      const HomeView(),
+      const  MealCategoryScreen(),
     ];
 
     return Scaffold(
@@ -35,8 +35,8 @@ class CustomBottomNavBarState extends State<CustomBottomNavBar> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.restaurant_menu),
-            label: 'Tracked Meals',
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.set_meal),

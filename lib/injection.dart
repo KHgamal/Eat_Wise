@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:eat_wise/features/meal_track/data/datasources/local_datasource.dart';
 import 'package:eat_wise/features/meal_track/data/repositories/meal_repository_impl.dart';
 import 'package:eat_wise/features/meal_track/domain/usecases/get_meals.dart';
-import 'package:eat_wise/features/meal_track/domain/usecases/sort_meals.dart';
 import 'package:eat_wise/features/meal_track/presentation/bloc/meal_bloc.dart';
 import 'package:get_it/get_it.dart';
 
@@ -27,14 +26,12 @@ Future<void> init() async {
   sl.registerLazySingleton(() => AddMeal(sl()));
   sl.registerLazySingleton(() => DeleteMeal(sl()));
   sl.registerLazySingleton(() => GetMeals(sl()));
-  sl.registerLazySingleton(() => SortMeals());
   
   // Bloc
   sl.registerFactory(() => MealTrackBloc(
     addMeal: sl(),
     deleteMeal: sl(),
     getMeals: sl(),
-    sortMeals: sl(),
   ));
   
   // Initialize Hive

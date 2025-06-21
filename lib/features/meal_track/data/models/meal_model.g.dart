@@ -21,7 +21,7 @@ class MealTrackModelAdapter extends TypeAdapter<MealTrackModel> {
       name: fields[1] as String,
       calories: fields[2] as int,
       time: fields[3] as DateTime,
-      photoPath: fields[4] as String?,
+      mealType: fields[4] as String? ?? 'unknown',
     );
   }
 
@@ -38,7 +38,7 @@ class MealTrackModelAdapter extends TypeAdapter<MealTrackModel> {
       ..writeByte(3)
       ..write(obj.time)
       ..writeByte(4)
-      ..write(obj.photoPath);
+      ..write(obj.mealType);
   }
 
   @override

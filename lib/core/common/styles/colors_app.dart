@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const Color lightOrange = Color(0xffFFD191);
-
+static const Color lightBlueAccent =  Colors.lightBlueAccent;
   static const Color lightGreen = Color(0xffB3E892);
   static const Color green = Color(0xff6AB054);
   static const Color darkGreen = Color(0xff316A30);
  static const Color orange = Color(0xffD48342);
-  static Color msgContainer = const Color(0xffEFEFF0);
+  static Color msgContainer = const Color(0xffF1F1F1);
   static Color grey =  Colors.grey;
  static const MaterialColor lightGreenSwatch =  MaterialColor(
   0xffB3E892, // Base color (Light Orange)

@@ -6,7 +6,7 @@ class GetMeals {
 
   GetMeals(this.repository);
 
-  List<MealTrack> call() {
-    return repository.getMeals();
+  List<MealTrack> call(String mealType, DateTime date) {
+    return repository.getMealsByTypeAndDate(mealType , date);
   }
 }

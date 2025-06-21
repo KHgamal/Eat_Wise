@@ -22,4 +22,15 @@ class LocalDataSource {
     final box = Hive.box<MealTrackModel>(boxName);
     return box.values.toList();
   }
+
+  List<MealTrackModel> getMealsByTypeAndDate(String mealType, DateTime date) {
+    final box = Hive.box<MealTrackModel>(boxName);
+    return box.values
+        .where((meal) =>
+            meal.mealType.toLowerCase() == mealType.toLowerCase() &&
+            meal.time.day == date.day &&
+            meal.time.month == date.month &&
+            meal.time.year == date.year)
+        .toList();
+  }
 }

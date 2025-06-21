@@ -1,12 +1,20 @@
-import 'package:eat_wise/core/common/styles/colors_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Styles {
   static TextStyle textStyleBook14 = TextStyle(
     fontSize: 14.sp,
-    // fontWeight: FontWeight.bold,
-    color: AppColors.grey,
+    color: Colors.black87,
+  );
+
+ static TextStyle textStyleBook16 = TextStyle(
+    fontSize: 16.sp,
+    color: Colors.black54,
+  );
+   static TextStyle textStyleBold16 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
   );
 
   static TextStyle textStyleBook20 = TextStyle(

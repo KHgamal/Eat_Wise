@@ -15,7 +15,7 @@ class MealTrackRepositoryImpl implements MealTrackRepository {
       name: meal.name,
       calories: meal.calories,
       time: meal.time,
-      photoPath: meal.photoPath,
+      mealType: meal.mealType,
     );
     await localDataSource.addMeal(mealModel);
   }
@@ -34,7 +34,21 @@ class MealTrackRepositoryImpl implements MealTrackRepository {
               name: model.name,
               calories: model.calories,
               time: model.time,
-              photoPath: model.photoPath,
+              mealType: model.mealType,
+            ))
+        .toList();
+  }
+
+  @override
+  List<MealTrack> getMealsByTypeAndDate(String mealType, DateTime date) {
+    final mealModels = localDataSource.getMealsByTypeAndDate(mealType, date);
+    return mealModels
+        .map((model) => MealTrack(
+              id: model.id,
+              name: model.name,
+              calories: model.calories,
+              time: model.time,
+              mealType: model.mealType,
             ))
         .toList();
   }
