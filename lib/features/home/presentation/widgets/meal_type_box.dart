@@ -61,17 +61,21 @@ class MealTypeBox extends StatelessWidget {
                   ),
                 )
               : ListView.builder(
-                  shrinkWrap: true, // Important for nested scrolling
-                  physics: const NeverScrollableScrollPhysics(), // Prevent inner scroll
+                  shrinkWrap: true, 
+                  physics: const NeverScrollableScrollPhysics(),
+                  padding: const EdgeInsets.only(left: 12),
                   itemCount: meals.length,
                   itemBuilder: (context, index) {
                     final meal = meals[index];
-                    return ListTile(
-                      title: Text('${meal.name} - ${meal.calories} kcal'),
-                      trailing: IconButton(
-                        icon: const Icon(Icons.delete),
+                    return Row(
+                      children: [
+                         Text('●  ${meal.name} - ${meal.calories} kcal'),
+                         const Spacer(),
+                     IconButton(
+                        icon: const Icon(Icons.delete , color: Colors.redAccent, size: 20,),
                         onPressed: () => onDeleteMeal(meal.id),
                       ),
+                      ],
                     );
                   },
                 ),
