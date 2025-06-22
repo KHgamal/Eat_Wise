@@ -1,17 +1,17 @@
 import 'package:dio/dio.dart';
-import 'package:eat_wise/features/meal_track/data/datasources/local_datasource.dart';
-import 'package:eat_wise/features/meal_track/data/repositories/meal_repository_impl.dart';
-import 'package:eat_wise/features/meal_track/domain/usecases/get_meals.dart';
-import 'package:eat_wise/features/meal_track/presentation/bloc/meal_bloc.dart';
+import 'package:eat_wise/features/home/data/datasources/local_datasource.dart';
+import 'package:eat_wise/features/home/data/repositories/meal_repository_impl.dart';
+import 'package:eat_wise/features/home/domain/usecases/get_meals.dart';
+import 'package:eat_wise/features/home/presentation/bloc/meal_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 import 'features/meal_recipe/data/datasources/api_service.dart';
 import 'features/meal_recipe/data/repositories/meal_repository_impl.dart';
 import 'features/meal_recipe/domain/repositories/meal_repository.dart';
 import 'features/meal_recipe/presentation/bloc/meal_bloc.dart';
-import 'features/meal_track/domain/repositories/meal_repository.dart';
-import 'features/meal_track/domain/usecases/add_meal.dart';
-import 'features/meal_track/domain/usecases/delete_meal.dart';
+import 'features/home/domain/repositories/meal_repository.dart';
+import 'features/home/domain/usecases/add_meal.dart';
+import 'features/home/domain/usecases/delete_meal.dart';
 
 final sl = GetIt.instance;
 

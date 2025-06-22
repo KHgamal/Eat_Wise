@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/common/styles/colors_app.dart';
 import '../../../../core/common/styles/text_style.dart';
-import '../../../meal_track/domain/entities/meal.dart';
+import '../../domain/entities/meal.dart';
 
 class MealTypeBox extends StatelessWidget {
   const MealTypeBox({

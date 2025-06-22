@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-import '../../../meal_track/presentation/bloc/meal_bloc.dart';
-import '../../../meal_track/presentation/bloc/meal_event.dart';
+import '../bloc/meal_bloc.dart';
+import '../bloc/meal_event.dart';
 
 class MealCalendar extends StatelessWidget {
   const MealCalendar(

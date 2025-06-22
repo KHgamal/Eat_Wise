@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../meal_track/domain/entities/meal.dart';
-import '../../../meal_track/presentation/bloc/meal_bloc.dart';
-import '../../../meal_track/presentation/bloc/meal_event.dart';
+import '../../domain/entities/meal.dart';
+import '../bloc/meal_bloc.dart';
+import '../bloc/meal_event.dart';
 
 void showAddMealDialog(BuildContext context, String mealType) {
   final nameController = TextEditingController();
