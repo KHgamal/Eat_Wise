@@ -8,6 +8,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'core/common/styles/theme.dart';
 import 'features/meal_recipe/presentation/bloc/meal_bloc.dart';
 import 'features/splash_screen/splash_view.dart';
+import 'features/water_track/presentation/views/water_track_view.dart';
 import 'injection.dart' as di;
 
 void main() async {
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               title: 'Meal Tracker',
               theme: appTheme,
-              home: const SplashScreen(),
+              home: const  AnimatedWaterScreen(),
             );
           }),
     );
