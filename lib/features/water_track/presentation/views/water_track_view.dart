@@ -1,5 +1,12 @@
-import 'dart:math';
+import 'package:eat_wise/features/water_track/presentation/widgets/water_track_texts.dart';
+import 'package:eat_wise/features/water_track/presentation/widgets/wave_painter.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../provider/water_provider.dart';
+import '../widgets/bubble_wave_painter.dart';
+import '../widgets/increase_decrease_water_dialog.dart';
+import '../widgets/water_track_bottom_bar.dart';
 
 class AnimatedWaterScreen extends StatefulWidget {
   const AnimatedWaterScreen({super.key});
@@ -17,6 +24,8 @@ class _AnimatedWaterScreenState extends State<AnimatedWaterScreen>
   late Animation<double> _fillAnimation;
 
   bool _isChanging = false;
+
+  /////?????????????????????????????????????
   double _targetAmount = 1200;
 
   @override
@@ -73,7 +82,8 @@ class _AnimatedWaterScreenState extends State<AnimatedWaterScreen>
 
   @override
   Widget build(BuildContext context) {
-    final fillPercent = _isChanging ? _fillAnimation.value : _currentAmount / _goalAmount;
+    final fillPercent =
+        _isChanging ? _fillAnimation.value : _currentAmount / _goalAmount;
     final remaining = _goalAmount - _currentAmount;
 
     return Scaffold(
@@ -99,119 +109,28 @@ class _AnimatedWaterScreenState extends State<AnimatedWaterScreen>
               builder: (_, __) {
                 return CustomPaint(
                   size: Size.infinite,
-                  painter: BubbleWavePainter(_bubbleController.value, fillPercent),
+                  painter:
+                      BubbleWavePainter(_bubbleController.value, fillPercent),
                 );
               },
             ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 60),
-              child: GestureDetector(
-                onTap: () => _changeWater(300),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    Icon(Icons.water_drop, size: 50, color: Colors.white),
-                    SizedBox(height: 8),
-                    Text('+300 ml', style: TextStyle(color: Colors.white)),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.topCenter,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 40),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text('Hello Jane', style: TextStyle(fontSize: 20, color: Colors.black)),
-                  Text('${_currentAmount.toStringAsFixed(0)}ml',
-                      style: const TextStyle(fontSize: 40, color: Colors.blueAccent)),
-                  Text('Remaining ${remaining.toStringAsFixed(0)}ml',
-                      style: const TextStyle(fontSize: 16, color: Colors.grey)),
-                ],
-              ),
-            ),
-          ),
+          WaterTrackTexts(currentAmount: _currentAmount, remaining: remaining),
+          WaterTrackBottomBar(
+            onIncrease: () => showWaterIntakeDialog(
+                context: context,
+                onPressed: ()=> _changeWater(int.parse(
+                    Provider.of<WaterProvider>(context, listen: false)
+                        .controller
+                        .text))),
+            onDecrease: () => showWaterIntakeDialog(
+                context: context,
+                onPressed: () => _changeWater(-int.parse(
+                    Provider.of<WaterProvider>(context, listen: false)
+                        .controller
+                        .text))),
+          )
         ],
       ),
     );
   }
-}
-
-class WavePainter extends CustomPainter {
-  final double animationValue;
-  final double startFillPercent;
-  final double endFillPercent;
-
-  WavePainter(this.animationValue, this.startFillPercent, this.endFillPercent);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.blueAccent
-      ..style = PaintingStyle.fill;
-
-    final path = Path();
-
-    final baseHeight = size.height * (1 - _interpolateFill());
-    final waveHeight1 = 30.0; // Higher wave
-    final waveHeight2 = 20.0; // Lower wave
-    final waveSpeed = animationValue * 4 * pi;
-
-    path.moveTo(0, baseHeight);
-    for (double i = 0; i <= size.width; i++) {
-      double normalizedX = i / size.width;
-      double wave1 = sin(normalizedX * 2 * pi + waveSpeed) * waveHeight1;
-      double wave2 = sin(normalizedX * 2 * pi + waveSpeed + pi) * waveHeight2;
-      double y = baseHeight - (wave1 + wave2);
-      path.lineTo(i, y);
-    }
-    path.lineTo(size.width, size.height);
-    path.lineTo(0, size.height);
-    path.close();
-
-    canvas.drawPath(path, paint);
-  }
-
-  double _interpolateFill() {
-    return startFillPercent + (animationValue * (endFillPercent - startFillPercent));
-  }
-
-  @override
-  bool shouldRepaint(covariant WavePainter oldDelegate) =>
-      animationValue != oldDelegate.animationValue || startFillPercent != oldDelegate.startFillPercent || endFillPercent != oldDelegate.endFillPercent;
-}
-
-class BubbleWavePainter extends CustomPainter {
-  final double animationValue;
-  final double fillPercent;
-
-  BubbleWavePainter(this.animationValue, this.fillPercent);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.white70
-      ..style = PaintingStyle.fill;
-
-    final yBase = size.height * (1 - fillPercent);
-    final rise = 60 * animationValue;
-
-    final bubbles = [
-      Offset(size.width * 0.4, yBase - rise),
-      Offset(size.width * 0.6, yBase - rise * 1.2),
-      Offset(size.width * 0.5, yBase - rise * 1.5),
-    ];
-
-    for (final b in bubbles) {
-      canvas.drawCircle(b, 6, paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => true;
 }
