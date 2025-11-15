@@ -86,9 +86,7 @@ class _AnimatedWaterScreenState extends State<AnimatedWaterScreen>
         _isChanging ? _fillAnimation.value : _currentAmount / _goalAmount;
     final remaining = _goalAmount - _currentAmount;
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Stack(
+    return Stack(
         children: [
           AnimatedBuilder(
             animation: _waveController,
@@ -130,7 +128,6 @@ class _AnimatedWaterScreenState extends State<AnimatedWaterScreen>
                         .text))),
           )
         ],
-      ),
-    );
+      );
   }
 }

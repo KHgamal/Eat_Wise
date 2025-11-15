@@ -1,3 +1,4 @@
+// no use
 /* import 'package:hive/hive.dart';
 
 part 'meal_type.g.dart';

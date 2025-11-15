@@ -22,18 +22,35 @@ class HomeView extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              // still constant data
               const HomeHeader(),
               const SizedBox(
                 height: 20,
               ),
-              const HealthCounterSection(),
+              // still constant data
+              /*const HealthCounterSection(),
               const SizedBox(
                 height: 20,
-              ),
+              ),*/
               BlocBuilder<MealTrackBloc, MealTrackState>(
                 builder: (context, state) {
                   return Column(
                     children: [
+                      state.maybeWhen(
+                        loaded: (breakfastMeals, lunchMeals, dinnerMeals,
+                            totalCalories, selectedDate) {
+                          return Column(
+                            children: [
+                              CalorieIndicator(
+                                consumed: totalCalories,
+                                goal: 1700,
+                              ),
+                              const SizedBox(height: 16),
+                            ],
+                          );
+                        },
+                        orElse: () => const SizedBox.shrink(),
+                      ),
                       MealCalendar(
                         focusedDay: state.maybeWhen(
                           loaded: (breakfastMeals, lunchMeals, dinnerMeals,
@@ -48,26 +65,17 @@ class HomeView extends StatelessWidget {
                           orElse: () => false,
                         ),
                       ),
-                      const SizedBox(
-                        height: 16,
-                      ),
+                      const SizedBox(height: 16),
                       state.when(
                         initial: () => const SizedBox.shrink(),
-                        error: (message) =>
-                            Center(child: Text("Error: $message")),
                         loading: () =>
                             const Center(child: CircularProgressIndicator()),
+                        error: (message) =>
+                            Center(child: Text("Error: $message")),
                         loaded: (breakfastMeals, lunchMeals, dinnerMeals,
                             totalCalories, selectedDate) {
                           return Column(
                             children: [
-                              CalorieIndicator(
-                                consumed: totalCalories,
-                                goal: 1700,
-                              ),
-                              const SizedBox(
-                                height: 16,
-                              ),
                               MealTypeBox(
                                 mealType: 'Breakfast',
                                 onPressed: () =>
@@ -77,9 +85,7 @@ class HomeView extends StatelessWidget {
                                     .read<MealTrackBloc>()
                                     .add(MealTrackEvent.deleteMeal(mealId)),
                               ),
-                              const SizedBox(
-                                height: 16,
-                              ),
+                              const SizedBox(height: 16),
                               MealTypeBox(
                                 mealType: 'Lunch',
                                 onPressed: () =>
@@ -89,9 +95,7 @@ class HomeView extends StatelessWidget {
                                     .read<MealTrackBloc>()
                                     .add(MealTrackEvent.deleteMeal(mealId)),
                               ),
-                              const SizedBox(
-                                height: 16,
-                              ),
+                              const SizedBox(height: 16),
                               MealTypeBox(
                                 mealType: 'Dinner',
                                 onPressed: () =>
@@ -104,11 +108,11 @@ class HomeView extends StatelessWidget {
                             ],
                           );
                         },
-                      )
+                      ),
                     ],
                   );
                 },
-              ),
+              )
             ],
           ),
         ),

@@ -18,6 +18,7 @@ class LocalDataSource {
     await box.delete(id);
   }
 
+  // no use
   List<MealTrackModel> getMeals() {
     final box = Hive.box<MealTrackModel>(boxName);
     return box.values.toList();

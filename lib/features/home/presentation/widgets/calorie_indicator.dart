@@ -20,20 +20,18 @@ class CalorieIndicator extends StatelessWidget {
     alignment: Alignment.topCenter,
     heightFactor: 0.5, 
       child: CircularPercentIndicator(
-        radius: 70,
-        lineWidth: 15.0,
+        radius: 80,
+        lineWidth: 13.0,
         percent: percent,
         animation: true,
-        circularStrokeCap: CircularStrokeCap.round,
-       // backgroundColor: AppColors.lightOrange,
+        circularStrokeCap: CircularStrokeCap.square,
         progressColor: AppColors.orange,
         arcType: ArcType.HALF,
         arcBackgroundColor: AppColors.lightOrange,
         center: Column(
-          // mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(height: 22,),
+            const SizedBox(height: 18,),
             const Text('🔥', style: TextStyle(fontSize: 20)),
             Text(
               '$consumed Kcal',
