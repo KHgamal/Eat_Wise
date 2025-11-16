@@ -25,15 +25,15 @@ ThemeData appTheme = ThemeData(
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12.r),
         borderSide: BorderSide(
-            color: AppColors.msgContainer, width: 2), // Remove default border
+            color: AppColors.grey, width: 2), // Remove default border
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12.r),
-        borderSide: BorderSide(color: AppColors.msgContainer, width: 2),
+        borderSide: BorderSide(color: AppColors.grey, width: 2),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12.r),
-        borderSide: BorderSide(color: AppColors.msgContainer, width: 1),
+        borderSide: BorderSide(color: AppColors.grey, width: 1),
       ),
-      labelStyle: const TextStyle(color: AppColors.orange)),
+      labelStyle:  TextStyle(color: AppColors.grey)),
 );

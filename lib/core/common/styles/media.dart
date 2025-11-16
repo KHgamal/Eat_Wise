@@ -10,6 +10,10 @@ class Assets {
   /// assets/images/decrease_water.png
   static const String assetsImagesDecreaseWater = "assets/images/decrease_water.png";
 
+  /// Assets for assetsImagesFemale
+  /// assets/images/female.png
+  static const String assetsImagesFemale = "assets/images/female.png";
+
   /// Assets for assetsImagesFilter
   /// assets/images/filter.png
   static const String assetsImagesFilter = "assets/images/filter.png";
@@ -21,5 +25,9 @@ class Assets {
   /// Assets for assetsImagesLineChart
   /// assets/images/line_chart.png
   static const String assetsImagesLineChart = "assets/images/line_chart.png";
+
+  /// Assets for assetsImagesMale
+  /// assets/images/male.png
+  static const String assetsImagesMale = "assets/images/male.png";
 }
 

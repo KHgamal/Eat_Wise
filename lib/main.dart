@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 import 'core/common/styles/theme.dart';
 import 'core/common/widgets/bottom_nav_bar.dart';
 import 'features/meal_recipe/presentation/bloc/meal_bloc.dart';
+import 'features/onboarding/presentation/views/onboarding_flow.dart';
 import 'features/splash_screen/splash_view.dart';
 import 'features/water_track/presentation/provider/water_provider.dart';
 import 'features/water_track/presentation/views/water_track_view.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 title: 'Meal Tracker',
                 theme: appTheme,
-                home: const CustomBottomNavBar(),
+                home: const OnboardingFlow(),
               );
             }),
       ),
