@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ContinueButton extends StatelessWidget {
   const ContinueButton({super.key, required this.onContinue});
-   final VoidCallback onContinue;
+   final VoidCallback? onContinue;
 
   @override
   Widget build(BuildContext context) {

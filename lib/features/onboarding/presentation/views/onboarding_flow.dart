@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/page_indicator.dart';
+import 'activity_level_page.dart';
 import 'gender_view.dart';
+import 'goal_page.dart';
 import 'height_weight_page.dart';
 
 class OnboardingFlow extends StatefulWidget {
@@ -18,8 +20,7 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
   void nextPage() {
     if (currentStep < 4) {
       _controller.nextPage(
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeInOut);
+          duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
     }
   }
 
@@ -52,9 +53,9 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
                 physics: const NeverScrollableScrollPhysics(), // Swipe disabled
                 children: [
                   GenderPage(onContinue: nextPage),
-                 // GoalPage(onContinue: nextPage),
-                 HeightWeightPage(onContinue: nextPage),
-                //  BirthdatePage(onContinue: nextPage),
+                  HeightWeightPage(onContinue: nextPage),
+                  ActivityLevelPage(onContinue: nextPage),
+                  GoalPage(onContinue: nextPage)
                 ],
               ),
             ),
