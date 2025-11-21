@@ -22,7 +22,19 @@ class _GenderPageState extends State<GenderPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 22,),
-          const Text(
+           const Text(
+            "Enter your name",
+            style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 30,),
+          TextField(
+            controller: nameController,
+            decoration: const InputDecoration(labelText: 'full name'),
+          ),
+          const Spacer(
+            flex: 2,
+          ),
+         const Text(
             "Choose Your Gender",
             style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
           ),
@@ -45,18 +57,6 @@ class _GenderPageState extends State<GenderPage> {
                     isActive: false),
               ),
             ],
-          ),
-          const Spacer(
-            flex: 2,
-          ),
-          const Text(
-            "Enter your name",
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 30,),
-          TextField(
-            controller: nameController,
-            decoration: const InputDecoration(labelText: 'full name'),
           ),
           const Spacer(
             flex: 2,

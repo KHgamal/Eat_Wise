@@ -41,12 +41,27 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
       body: SafeArea(
         child: Column(
           children: [
-            /// Step Indicator
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: StepIndicator(currentStep: currentStep),
+            Row(
+              children: [
+                currentStep > 1
+                    ? IconButton(
+                        icon: const Icon(Icons.arrow_back),
+                        onPressed: () {
+                          _controller.previousPage(
+                            duration: const Duration(milliseconds: 300),
+                            curve: Curves.easeInOut,
+                          );
+                        },
+                      )
+                    : const SizedBox(),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: StepIndicator(currentStep: currentStep),
+                  ),
+                ),
+              ],
             ),
-
             Expanded(
               child: PageView(
                 controller: _controller,
