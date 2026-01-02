@@ -84,9 +84,6 @@ class _$MealTrackEventCopyWithImpl<$Res, $Val extends MealTrackEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,8 +103,6 @@ class __$$AddMealImplCopyWithImpl<$Res>
       _$AddMealImpl _value, $Res Function(_$AddMealImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,9 +141,7 @@ class _$AddMealImpl implements _AddMeal {
   @override
   int get hashCode => Object.hash(runtimeType, meal);
 
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AddMealImplCopyWith<_$AddMealImpl> get copyWith =>
@@ -233,10 +226,7 @@ abstract class _AddMeal implements MealTrackEvent {
   const factory _AddMeal(final MealTrack meal) = _$AddMealImpl;
 
   MealTrack get meal;
-
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AddMealImplCopyWith<_$AddMealImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -258,8 +248,6 @@ class __$$DeleteMealImplCopyWithImpl<$Res>
       _$DeleteMealImpl _value, $Res Function(_$DeleteMealImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -298,9 +286,7 @@ class _$DeleteMealImpl implements _DeleteMeal {
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteMealImplCopyWith<_$DeleteMealImpl> get copyWith =>
@@ -385,10 +371,7 @@ abstract class _DeleteMeal implements MealTrackEvent {
   const factory _DeleteMeal(final String id) = _$DeleteMealImpl;
 
   String get id;
-
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeleteMealImplCopyWith<_$DeleteMealImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -407,9 +390,6 @@ class __$$LoadMealsImplCopyWithImpl<$Res>
   __$$LoadMealsImplCopyWithImpl(
       _$LoadMealsImpl _value, $Res Function(_$LoadMealsImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -527,8 +507,6 @@ class __$$SelectDateImplCopyWithImpl<$Res>
       _$SelectDateImpl _value, $Res Function(_$SelectDateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -567,9 +545,7 @@ class _$SelectDateImpl implements _SelectDate {
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SelectDateImplCopyWith<_$SelectDateImpl> get copyWith =>
@@ -654,10 +630,7 @@ abstract class _SelectDate implements MealTrackEvent {
   const factory _SelectDate(final DateTime date) = _$SelectDateImpl;
 
   DateTime get date;
-
-  /// Create a copy of MealTrackEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SelectDateImplCopyWith<_$SelectDateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

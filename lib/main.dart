@@ -8,18 +8,28 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 import 'core/common/styles/theme.dart';
 import 'core/common/widgets/bottom_nav_bar.dart';
-import 'features/meal_recipe/presentation/bloc/meal_bloc.dart';
-import 'features/onboarding/presentation/views/onboarding_flow.dart';
+import 'core/di/core_injection.dart';
+import 'features/home/meal_injection.dart';
 import 'features/splash_screen/splash_view.dart';
+import 'features/user/data/models/user_model.dart';
+import 'features/user/presentation/bloc/user_bloc.dart';
+import 'features/user/presentation/bloc/user_event.dart';
+import 'features/user/presentation/pages/onboarding_flow.dart';
+import 'features/user/user_injection.dart' as user;
 import 'features/water_track/presentation/provider/water_provider.dart';
 import 'features/water_track/presentation/views/water_track_view.dart';
-import 'injection.dart' as di;
+import 'features/home/meal_injection.dart' as meal;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
   Hive.registerAdapter(MealTrackModelAdapter());
-  await di.init();
+  Hive.registerAdapter(UserModelAdapter());
+  Hive.registerAdapter(GenderAdapter());
+  Hive.registerAdapter(GoalAdapter());
+  Hive.registerAdapter(ActivityLevelAdapter());
+  await initCore();
+  await user.initUserFeature();
+  await initMealFeature();
   runApp(const MyApp());
 }
 
@@ -34,10 +44,10 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider<MealTrackBloc>(
             create: (_) =>
-                di.sl<MealTrackBloc>()..add(const MealTrackEvent.loadMeals()),
+                meal.sl<MealTrackBloc>()..add(const MealTrackEvent.loadMeals()),
           ),
-          BlocProvider(
-            create: (_) => di.sl<MealBloc>(),
+          BlocProvider<UserBloc>(
+            create: (context) => user.sl<UserBloc>()..add(LoadUserEvent()),
           ),
         ],
         child: ScreenUtilInit(

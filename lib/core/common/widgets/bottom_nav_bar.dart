@@ -1,7 +1,6 @@
 import 'package:eat_wise/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../../features/meal_recipe/presentation/views/meal_category_view.dart';
 import '../../../features/water_track/presentation/views/water_track_view.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
@@ -29,7 +28,6 @@ class CustomBottomNavBarState extends State<CustomBottomNavBar> {
     final List<Widget> screens = [
       const HomeView(),
       const AnimatedWaterScreen(),
-      const  MealCategoryScreen(),
     ];
 
     return Scaffold(
@@ -40,17 +38,9 @@ class CustomBottomNavBarState extends State<CustomBottomNavBar> {
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          /* BottomNavigationBarItem(
-            icon: Icon(Icons.set_meal),
-            label: 'steps',
-          ),*/
            BottomNavigationBarItem(
             icon: Icon(Icons.water_drop),
             label: 'Drink water',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.set_meal),
-            label: 'Meal recipes',
           ),
         ],
         currentIndex: _selectedIndex,

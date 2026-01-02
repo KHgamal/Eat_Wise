@@ -21,7 +21,7 @@ class MealTrackModelAdapter extends TypeAdapter<MealTrackModel> {
       name: fields[1] as String,
       calories: fields[2] as int,
       time: fields[3] as DateTime,
-      mealType: fields[4] as String? ?? 'unknown',
+      mealType: fields[4] as String,
     );
   }
 
