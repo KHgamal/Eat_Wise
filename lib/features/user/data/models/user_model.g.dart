@@ -21,7 +21,7 @@ class UserModelAdapter extends TypeAdapter<UserModel> {
       name: fields[1] as String,
       gender: fields[2] as Gender,
       height: fields[3] as int,
-      weight: fields[4] as double,
+      weight: fields[4] as int,
       birthDate: fields[5] as DateTime,
       activity: fields[6] as ActivityLevel,
       goal: fields[7] as Goal,

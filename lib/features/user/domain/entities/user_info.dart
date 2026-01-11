@@ -8,8 +8,8 @@ class UserInfo {
   final String id;
   final String name;
   final Gender gender;
-  final int height; // cm
-  final double weight; // kg
+  final int height; 
+  final int weight;
   final DateTime birthDate;
   final ActivityLevel activity;
   final UserGoal goal;
@@ -32,7 +32,7 @@ class UserInfo {
     String? name,
     Gender? gender,
     int? height,
-    double? weight,
+    int? weight,
     DateTime? birthDate,
     ActivityLevel? activity,
     UserGoal? goal,

@@ -9,13 +9,17 @@ import 'domain/repositories/user_repository.dart';
 import 'domain/usecases/calculate_daily_calories.dart';
 import 'domain/usecases/get_user_info.dart';
 import 'domain/usecases/save_user_info.dart';
-import 'presentation/bloc/user_bloc.dart';
+import 'presentation/Controller/bloc/user_bloc.dart';
 
 final sl = GetIt.instance;
 
 Future<void> initUserFeature() async {
+
   // Register adapters
-  //  Hive.registerAdapter(UserModelAdapter());
+  Hive.registerAdapter(UserModelAdapter());
+  Hive.registerAdapter(GenderAdapter());
+  Hive.registerAdapter(GoalAdapter());
+  Hive.registerAdapter(ActivityLevelAdapter());
 
   // Open box
    await Hive.openBox<UserModel>(UserLocalDataSourceImpl.boxName);
@@ -38,9 +42,9 @@ Future<void> initUserFeature() async {
   // Bloc
   sl.registerFactory(
     () => UserBloc(
-      calculateDailyCalories: sl(),
       saveUserInfo: sl(),
       getUserInfo: sl(),
+      calculateDailyCalories: sl(),
     ),
   );
 }

@@ -8,7 +8,6 @@ import '../bloc/meal_event.dart';
 import '../bloc/meal_state.dart';
 import '../widgets/add_meal_dialog.dart';
 import '../widgets/calorie_indicator.dart';
-import '../widgets/health_counter_section.dart';
 import '../widgets/meal_calendar.dart';
 
 class HomeView extends StatelessWidget {
@@ -27,11 +26,6 @@ class HomeView extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              // still constant data
-              /*const HealthCounterSection(),
-              const SizedBox(
-                height: 20,
-              ),*/
               BlocBuilder<MealTrackBloc, MealTrackState>(
                 builder: (context, state) {
                   return Column(

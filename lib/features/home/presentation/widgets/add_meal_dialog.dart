@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../domain/entities/meal.dart';
 import '../bloc/meal_bloc.dart';
 import '../bloc/meal_event.dart';
+import '../bloc/meal_state.dart';
 
 void showAddMealDialog(BuildContext context, String mealType) {
   final nameController = TextEditingController();

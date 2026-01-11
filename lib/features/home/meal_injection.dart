@@ -3,7 +3,9 @@ import 'package:eat_wise/features/home/data/repositories/meal_repository_impl.da
 import 'package:eat_wise/features/home/domain/usecases/get_meals.dart';
 import 'package:eat_wise/features/home/presentation/bloc/meal_bloc.dart';
 import 'package:get_it/get_it.dart';
+import 'package:hive/hive.dart';
 
+import 'data/models/meal_model.dart';
 import 'domain/repositories/meal_repository.dart';
 import 'domain/usecases/add_meal.dart';
 import 'domain/usecases/delete_meal.dart';
@@ -11,6 +13,9 @@ import 'domain/usecases/delete_meal.dart';
 final sl = GetIt.instance;
 
 Future<void> initMealFeature() async {
+
+  Hive.registerAdapter(MealTrackModelAdapter());
+
   // Data Sources
   sl.registerLazySingleton<LocalDataSource>(() => LocalDataSource());
   

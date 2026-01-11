@@ -6,6 +6,7 @@ part of 'meal_model.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
+
 class MealTrackModelAdapter extends TypeAdapter<MealTrackModel> {
   @override
   final int typeId = 0;

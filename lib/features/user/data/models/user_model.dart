@@ -48,7 +48,7 @@ class UserModel extends HiveObject {
   final int height;
 
   @HiveField(4)
-  final double weight;
+  final int weight;
 
   @HiveField(5)
   final DateTime birthDate;
