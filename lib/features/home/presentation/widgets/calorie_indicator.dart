@@ -27,16 +27,17 @@ class CalorieIndicator extends StatelessWidget {
         circularStrokeCap: CircularStrokeCap.square,
         progressColor: AppColors.orange,
         arcType: ArcType.HALF,
-        arcBackgroundColor: AppColors.lightOrange,
+        arcBackgroundColor: AppColors.msgContainer,
         center: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(height: 18,),
+            const SizedBox(height:24,),
             const Text('🔥', style: TextStyle(fontSize: 20)),
             Text(
               '$consumed Kcal',
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
+             const SizedBox(height:6,),
             Text(
               'of $goal kcal',
               style: TextStyle(color: Colors.grey[400], fontSize: 12),

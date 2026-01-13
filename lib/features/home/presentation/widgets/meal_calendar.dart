@@ -17,7 +17,7 @@ class MealCalendar extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.white,
+        color:AppColors.msgContainer,
       ),
       child: TableCalendar(
         focusedDay: focusedDay,
@@ -33,16 +33,18 @@ class MealCalendar extends StatelessWidget {
         headerStyle: const HeaderStyle(
           formatButtonVisible: false, // Hides the "Month" button
           titleCentered: true,
+
         ),
-        calendarStyle: const CalendarStyle(
+        calendarStyle:  CalendarStyle(
           todayDecoration: BoxDecoration(
-            color: AppColors.lightGreen,
+            color: AppColors.grayishBlue.withAlpha(80),
             shape: BoxShape.circle,
           ),
           selectedDecoration: BoxDecoration(
-            color: AppColors.green,
+            color: AppColors.grayishBlue,
             shape: BoxShape.circle,
           ),
+          
         ),
       ),
     );

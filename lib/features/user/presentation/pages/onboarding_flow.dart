@@ -53,7 +53,7 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(16),
-                          child: StepIndicator(
+                          child: PageIndicator(
                             currentStep: currentStep,
                           ),
                         ),

@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 ThemeData appTheme = ThemeData(
   useMaterial3: false,
 
-  primarySwatch: AppColors.lightGreenSwatch,
+  primarySwatch: AppColors.lightOrangeSwatch,
 
   // elevated button
   elevatedButtonTheme: ElevatedButtonThemeData(
@@ -13,27 +13,32 @@ ThemeData appTheme = ThemeData(
       foregroundColor: AppColors.orange,
       backgroundColor: Colors.transparent,
       elevation: 0,
+      shadowColor: Colors.transparent,
+      surfaceTintColor: Colors.transparent,
+       overlayColor: Colors.transparent,
+      splashFactory: NoSplash.splashFactory, 
       side: const BorderSide(color: AppColors.orange),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.r),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
     ),
   ),
- 
- // input fields
+
+  // input fields
   inputDecorationTheme: InputDecorationTheme(
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12.r),
-        borderSide: BorderSide(
-            color: AppColors.grey, width: 2), // Remove default border
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12.r),
-        borderSide: BorderSide(color: AppColors.grey, width: 2),
-      ),
-      enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12.r),
-        borderSide: BorderSide(color: AppColors.grey, width: 1),
-      ),
-      labelStyle:  TextStyle(color: AppColors.grey)),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12.r),
+      borderSide: BorderSide(
+        color: AppColors.grey,
+        width: 2,
+      ), // Remove default border
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12.r),
+      borderSide: BorderSide(color: AppColors.grey, width: 2),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12.r),
+      borderSide: BorderSide(color: AppColors.grey, width: 1),
+    ),
+    labelStyle: TextStyle(color: AppColors.grey),
+  ),
 );

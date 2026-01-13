@@ -1,3 +1,4 @@
+import 'package:eat_wise/core/common/styles/colors_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,7 +15,7 @@ class Styles {
    static TextStyle textStyleBold16 = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.bold,
-    color: Colors.black,
+    color: AppColors.grayishBlue,
   );
 
   static TextStyle textStyleBook20 = TextStyle(
@@ -26,6 +27,6 @@ class Styles {
   static TextStyle textStyleBook18 = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.bold,
-    color: Colors.black,
+    color: AppColors.grayishBlue,
   );
 }

@@ -18,7 +18,6 @@ class GenderPage extends StatefulWidget {
 }
 
 class _GenderPageState extends State<GenderPage> {
-  final nameController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -37,7 +36,6 @@ class _GenderPageState extends State<GenderPage> {
             ),
             const SizedBox(height: 30),
             TextFormField(
-              controller: nameController,
               decoration: const InputDecoration(labelText: 'full name'),
               validator: (value) {
                 if (value == null || value.isEmpty) {
@@ -45,6 +43,9 @@ class _GenderPageState extends State<GenderPage> {
                 }
                 return null;
               },
+              onChanged: (value) => context.read<UserBloc>().add(
+                NameSelected(value),
+              ),
             ),
             const Spacer(flex: 2),
             const Text(
@@ -90,12 +91,9 @@ class _GenderPageState extends State<GenderPage> {
               onContinue: () {
                 if (_formKey.currentState!.validate()) {
                   if (context.read<UserBloc>().state.gender == null) {
-                   showValidationError(context, "Please select your gender");
+                    showValidationError(context, "Please select your gender");
                     return;
                   }
-                  context.read<UserBloc>().add(
-                    NameSelected(nameController.text),
-                  );
                   context.read<OnboardingCubit>().next();
                 }
               },

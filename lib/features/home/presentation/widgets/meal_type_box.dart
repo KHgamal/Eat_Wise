@@ -11,13 +11,13 @@ class MealTypeBox extends StatelessWidget {
     required this.mealType,
     this.onPressed,
     required this.meals,
-    required this.onDeleteMeal, // Callback for deleting a meal
+    required this.onDeleteMeal,
   });
 
   final String mealType;
   final void Function()? onPressed;
   final List<MealTrack> meals;
-  final void Function(String mealId) onDeleteMeal; // Callback to handle deletion
+  final void Function(String mealId) onDeleteMeal;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class MealTypeBox extends StatelessWidget {
                   onPressed: onPressed,
                   icon: Icon(
                     Icons.add_circle,
-                    color: AppColors.grey,
+                    color: AppColors.grayishBlue,
                   ),
                   padding: EdgeInsets.zero,
                   constraints: const BoxConstraints(),
@@ -72,7 +72,7 @@ class MealTypeBox extends StatelessWidget {
                          Text('●  ${meal.name} - ${meal.calories} kcal'),
                          const Spacer(),
                      IconButton(
-                        icon: const Icon(Icons.delete , color: Colors.redAccent, size: 20,),
+                        icon: const Icon(Icons.delete , color: AppColors.orange, size: 20,),
                         onPressed: () => onDeleteMeal(meal.id),
                       ),
                       ],

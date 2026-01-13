@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class StepIndicator extends StatelessWidget {
-  final int currentStep; // 1,2,3,4
+class PageIndicator extends StatelessWidget {
+  final int currentStep;
   final int totalSteps;
 
-  const StepIndicator({
+  const PageIndicator({
     super.key,
     required this.currentStep,
     this.totalSteps = 4,

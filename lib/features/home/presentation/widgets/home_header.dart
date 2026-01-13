@@ -1,5 +1,9 @@
 import 'package:eat_wise/core/common/styles/text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/common/styles/colors_app.dart';
+import '../../../user/presentation/Controller/bloc/user_bloc.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -10,25 +14,20 @@ class HomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const CircleAvatar(
+         CircleAvatar(
           radius: 25,
-          backgroundColor: Colors.white,
+          backgroundColor:AppColors.msgContainer,
         ),
         const SizedBox(width: 12,),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        Row(
+         // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("welcome...!" , style: Styles.textStyleBook14,),
+            Text("WELCOME," , style: Styles.textStyleBook18,),
             const SizedBox(height:5,),
-            Text("User Name" , style: Styles.textStyleBook18,)
+            Text(context.read<UserBloc>().state.name ?? "Guest".toUpperCase() , style: Styles.textStyleBook18,)
           ],
         ),
-        const Spacer(),
-         CircleAvatar(
-          radius: 20,
-          backgroundColor: Colors.white,
-          child: IconButton(onPressed: (){}, icon: const Icon(Icons.notifications_outlined , color: Colors.black87,)),
-        ),
+        
       ],
     );
   }

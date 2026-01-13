@@ -1,6 +1,7 @@
 import 'package:eat_wise/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../../features/steps/presentation/views/step_indicator.dart';
 import '../../../features/water_track/presentation/views/water_track_view.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
@@ -27,10 +28,11 @@ class CustomBottomNavBarState extends State<CustomBottomNavBar> {
 
     final List<Widget> screens = [
       const HomeView(),
-      const AnimatedWaterScreen(),
+      const StepTrackerPage(),
     ];
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: screens[_selectedIndex], 
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -39,8 +41,8 @@ class CustomBottomNavBarState extends State<CustomBottomNavBar> {
             label: 'Home',
           ),
            BottomNavigationBarItem(
-            icon: Icon(Icons.water_drop),
-            label: 'Drink water',
+            icon: Icon(Icons.directions_walk),
+            label: 'steps',
           ),
         ],
         currentIndex: _selectedIndex,

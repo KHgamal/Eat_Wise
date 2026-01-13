@@ -20,7 +20,7 @@ class HealthCounterContainer extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.white,
+        color: AppColors.msgContainer,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +31,7 @@ class HealthCounterContainer extends StatelessWidget {
               Text(title),
               CircleAvatar(
                 radius: 18,
-                backgroundColor: AppColors.msgContainer,
+                backgroundColor: Colors.white,
                 child: Icon(icon , color: color,),
               ),
             ],
